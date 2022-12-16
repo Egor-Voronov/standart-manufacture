@@ -1,0 +1,7 @@
+// global styles
+@import "src/styles/_styles/variables";
+@import "src/styles/_styles/general";
+
+//local styles
+@import "src/components/header/header";
+@import "src/components/header/RightItems/RightItem";

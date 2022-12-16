@@ -1,0 +1,122 @@
+
+.header {
+    width: 100%;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header__nav {
+    width: 1280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+}
+
+.logo {
+    width: 220px;
+    height: 54.59px;
+}
+
+.menu__item {
+    float: left;
+    list-style-type: none;
+    margin: 30px;
+}
+
+.header_menu_anchor {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24.38px;
+}
+
+
+.header_menu_toggle {
+    display: none;
+    /* border-radius: 5px; */
+}
+
+@media (max-width: 740px) {
+    .header__nav {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .logo {
+        width: 105.3px;
+        height: 26px;
+    }
+
+    .header_menu_toggle {
+        width: 26px;
+        height: 26px;
+    }
+
+    .menu__item {
+        float: none;
+        animation: slide .5s linear 1;
+    }
+
+    @keyframes slide {
+        0%{
+            transform: translateX(50px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .header_menu_anchor {
+        font-size: 20px;
+            &:hover::after,
+            &:focus::after {
+                @media (max-width: 740px) {
+                    position: relative;
+                    left: 15%;
+                    width: 70%;
+                }
+            }
+    }
+
+    .header_menu_items {
+        margin-top: 30px;
+        display: none;
+        position: relative;
+    }
+
+    .header__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .header_menu_toggle {
+        font-size: 30px;
+        display: block;
+        color: #eee;
+    }
+
+    .menu_toggle_opened {
+        display: block;
+    }
+    
+    .menu_toggle_closed {
+        display: none;
+    }
+}
+
+@media (min-width: 741px) {
+    .header {
+        max-height: 116px;
+    }
+}
