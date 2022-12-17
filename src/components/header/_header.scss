@@ -8,15 +8,21 @@
     position: fixed;
 
     font-family: 'Montserrat', sans-serif;
+
+    @extend %box-shadow;
 }
 
 .header__nav {
-    width: 1280px;
+    width: 1380px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px 40px;
+
+    position: relative;
+    margin-left: -63px;
+    top: 9px;
 }
 
 .logo {
@@ -27,13 +33,15 @@
 .menu__item {
     float: left;
     list-style-type: none;
-    margin: 30px;
+    margin: 21px;
 }
 
 .header_menu_anchor {
     font-weight: 400;
     font-size: 20px;
     line-height: 24.38px;
+    @extend %anchor;
+    cursor: pointer;
 }
 
 
@@ -42,11 +50,20 @@
     /* border-radius: 5px; */
 }
 
-@media (max-width: 740px) {
+@media (max-width: $headerMobileWidth) {
     .header__nav {
         flex-direction: column;
         text-align: center;
-        
+
+        position: relative;
+        margin-left: 0;
+        top: 0;
+    }
+
+    .header__nav {
+        justify-content: space-around;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .logo {
@@ -62,6 +79,9 @@
     .menu__item {
         float: none;
         animation: slide .5s linear 1;
+        @media (max-height: $headerMobileHeight2) {
+            float: left;
+        }
     }
 
     @keyframes slide {
@@ -79,7 +99,7 @@
         font-size: 20px;
             &:hover::after,
             &:focus::after {
-                @media (max-width: 740px) {
+                @media (max-width: $headerMobileWidth) {
                     position: relative;
                     left: 15%;
                     width: 70%;
@@ -90,7 +110,6 @@
     .header_menu_items {
         margin-top: 30px;
         display: none;
-        position: relative;
     }
 
     .header__menu {
@@ -115,8 +134,15 @@
     }
 }
 
-@media (min-width: 741px) {
+
+@media (min-width: calc($headerMobileWidth + 1px)) {
     .header {
         max-height: 116px;
+    }
+
+    .header__logo {
+        position: relative;
+        top: -4px;
+        right: -57px;
     }
 }

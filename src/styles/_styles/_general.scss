@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-    overflow: hidden;
+    
 }
 
 body {
@@ -14,37 +14,3 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-.anchor {
-    color: $black;
-    text-decoration: none;
-    transition: .4s ease-in-out;
- 
-    &::after {
-        background-color: $black;
-        display: block;
-        content: "";
-        height: 2px;
-        width: 0%;
-        -webkit-transition: width .4s ease-in-out;
-        -moz--transition: width .4s ease-in-out;
-        transition: width .4s ease-in-out;
-    }
-    &:hover::after,
-    &:focus::after {
-        width: 100%;
-        transition: .4s ease-in-out;
-    }
-
-    &:active {
-        color: $gray;
-        text-decoration: none;
-        transition: .4s ease-in-out;
-        
-        &::after {
-            display: none;
-            transition: .4s ease-in-out;
-        }
-
-    }
-
-}

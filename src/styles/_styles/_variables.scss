@@ -3,6 +3,51 @@ $black: #000;
 $red: #E1322D;
 $white: #fff;
 $gray: #6C6C6C;
+$darkGreen: #298601;
+
+$headerMobileWidth: 1273px;
+$headerMobileHeight1: 439px;
+$headerMobileHeight2: 366px;
+
+%anchor {
+    color: $black;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+
+    &::after {
+        background-color: $black;
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        -webkit-transition: width .4s ease-in-out;
+        -moz--transition: width .4s ease-in-out;
+        transition: width .4s ease-in-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        width: 100%;
+        transition: .4s ease-in-out;
+    }
+
+    &:active {
+        color: $gray;
+        text-decoration: none;
+        transition: .4s ease-in-out;
+        
+        &::after {
+            display: none;
+            transition: .4s ease-in-out;
+        }
+
+    }
+}
+
+%box-shadow {
+    box-shadow: 0px 4px 8px rgba(79, 79, 79, 0.14);
+}
 
 // %montserratBold {
 

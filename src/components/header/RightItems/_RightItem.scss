@@ -1,0 +1,114 @@
+.menu_right_items {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    left: 45px;
+    @media (max-width: $headerMobileWidth) {
+        left: 0px;
+        top: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-height: $headerMobileHeight1) {
+            flex-direction: row;
+        }
+
+        .r_item_anchor {
+            left: 0px;
+        }
+        .r_item_texts {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.r_item_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.r_item_top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.r_item_img {
+    height: 18px;
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+.r_item_texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.r_item_bold {
+    position: relative;
+    margin-left: 9px;
+
+    font-weight: 600;
+    font-size: 20px;
+    color: $black;
+    white-space: nowrap;
+}
+
+.r_item_anchor {
+    text-decoration: none;
+    @extend %anchor;
+    cursor: pointer;
+    color: $green;
+    transition: .4s ease-in-out;
+    white-space: nowrap;
+
+    position: relative;
+    left: 10px;
+
+    &:active {
+        color: $darkGreen;
+    }
+}
+
+.r_item_anchor_city {
+    &::after {
+        background-color: $green;
+        height: 0.5px;
+        position: absolute;
+    }
+}
+
+.r_item_anchor_phone {
+    border-bottom: 1px $green solid;
+    height: 20px;
+    &::after {
+        text-decoration: none;
+        background-color: $white;
+        height: 0.5px;
+        position: absolute;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        background-color: $white;
+    }
+
+
+    &:active {
+        text-decoration: none;
+        &::after {
+            text-decoration: none;
+            background-color: $white;
+            height: 0.5px;
+            position: absolute;
+            display: block;
+        }
+    }
+}
+
