@@ -13,16 +13,10 @@ export default function Header() {
         return setToggle(!toggle)
     }
 
-    let menuClassArr = ['header_menu_items']
-    let toggleImg = bars
+    const menuClassArr = ['header_menu_items']
+    const toggleImg = toggle ? cross : bars
 
-    if (toggle) {
-        menuClassArr[1] = 'menu_toggle_opened'
-        toggleImg = cross
-    } else {
-        menuClassArr[1] = 'menu_toggle_closed'
-        toggleImg = bars
-    }
+    toggle ? menuClassArr[1] = 'menu_toggle_opened' : menuClassArr[1] = 'menu_toggle_closed'
 
     return (
         <header className="header">
