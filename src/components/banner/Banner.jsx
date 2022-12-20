@@ -1,6 +1,5 @@
 export default function Banner () {
     return (
-        <>
         <div className="backgroundImage backgroundImage__banner">
                 <div className="banner__container">
                 <h1 className="banner__heading banner__item">краб - система</h1>
@@ -12,7 +11,5 @@ export default function Banner () {
                 </button></a>
             </div>
         </div>
-        <div className="div"></div>
-        </>
     )
 }
