@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     position: fixed;
+    z-index: 99;
+    margin-top: -14px;
 
     font-family: 'Montserrat', sans-serif;
 
@@ -21,8 +23,8 @@
     padding: 30px 40px;
 
     position: relative;
-    margin-left: -63px;
-    top: 9px;
+    margin-left: -84.5px;
+    top: 14px;
 }
 
 .logo {
@@ -51,6 +53,11 @@
 }
 
 @media (max-width: $headerMobileWidth) {
+    .header {
+        z-index: 99;
+        
+    }
+
     .header__nav {
         flex-direction: column;
         text-align: center;
@@ -67,13 +74,22 @@
     }
 
     .logo {
-        width: 105.3px;
-        height: 26px;
+        width: 120px;
+    }
+
+    .header__logo {
+        position: relative;
+        top: 1.5px;
+        left: -11px;
     }
 
     .header_menu_toggle {
         width: 26px;
-        height: 26px;
+        height: 35px;
+
+        position: relative;
+        top: -1.5px;
+        left: 10px;
     }
 
     .menu__item {
@@ -108,7 +124,7 @@
     }
 
     .header_menu_items {
-        margin-top: 30px;
+        margin-top: 0px;
         display: none;
     }
 
@@ -125,6 +141,7 @@
         color: #eee;
     }
 
+    //служебные классы, которые я навешиваю динамически
     .menu_toggle_opened {
         display: block;
     }
@@ -132,12 +149,33 @@
     .menu_toggle_closed {
         display: none;
     }
+
+    .header_closed_height {
+        height: 56px;
+    }
+
+    .header_open_height {
+        .header__menu {
+            top: -31.2px;
+            position: relative;
+            @media (orientation: landscape) {
+                top: -26.2px;
+            }
+        }
+    }
+
+    @media (orientation: landscape) {
+        .header__menu {
+            position: relative;
+            top: 5px;
+        }
+    }
 }
 
 
 @media (min-width: calc($headerMobileWidth + 1px)) {
     .header {
-        max-height: 116px;
+        max-height: 130px;
     }
 
     .header__logo {

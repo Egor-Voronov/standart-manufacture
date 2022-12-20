@@ -1,7 +1,8 @@
-// global styles
+// глобальные стили
 @import "src/styles/_styles/variables";
 @import "src/styles/_styles/general";
 
-//local styles
+//локальные стили
 @import "src/components/header/header";
 @import "src/components/header/RightItems/RightItem";
+@import "src/components/banner/banner.scss"

@@ -14,12 +14,14 @@ export default function Header() {
     }
 
     const menuClassArr = ['header_menu_items']
+    const headerClassArr = ['header']
     const toggleImg = toggle ? cross : bars
 
     toggle ? menuClassArr[1] = 'menu_toggle_opened' : menuClassArr[1] = 'menu_toggle_closed'
+    toggle ? headerClassArr[1] = 'header_open_height' : headerClassArr[1] = 'header_closed_height'
 
     return (
-        <header className="header">
+        <header className={headerClassArr.join(' ')} >
             <nav className="header__nav">
                 <div className="header__menu">
                     <a href={window.location.href}><img src={logo} alt="логотип" className="logo header__logo" /></a>
