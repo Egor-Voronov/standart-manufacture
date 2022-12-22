@@ -41,19 +41,14 @@
 }
 
 .banner__btn {
-    width: 174px;
-    height: 29px;
+    width: 173px;
+    height: 30px;
 
-    font-size: 10px;
+    font-size: 12px;
 
     position: relative;
     margin-left: -1.5px;
-}
-
-.div {
-    width: 100%;
-    height: 50vh;
-    background-color: red;
+    margin-top: 14px;
 }
 
 @media (min-width: $bannerDesktopWidth) {
@@ -101,7 +96,6 @@
         background-size: cover;
         background-size: 110%;
         background-repeat: no-repeat;
-        background-color: aqua;
 
         height: 260px;
 
