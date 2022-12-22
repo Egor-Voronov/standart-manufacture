@@ -1,6 +1,7 @@
 import Header from "./header/Header"
 import Banner from "./banner/Banner"
 import Advanatages from "./advantages/Advantages"
+import Catalog from "./Catalog/Catalog"
 
 function App() {
    return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Banner />
       <Advanatages />
+      <Catalog />
     </div>
   )
 }

@@ -13,6 +13,10 @@ export default function Header() {
         return setToggle(!toggle)
     }
 
+    const anchorClickHandler = () => {
+        return setToggle(false)
+    }
+
     const menuClassArr = ['header_menu_items']
     const headerClassArr = ['header']
     const toggleImg = toggle ? cross : bars
@@ -28,14 +32,22 @@ export default function Header() {
                     <img src={toggleImg} alt="открыть / закрыть навигацию" onClick={() => (toggleHandler)()} className='header_menu_toggle' />
                 </div>
                 <ul className={menuClassArr.join(' ')}>
-                    <li className="menu__item"><a className="anchor header_menu_anchor" href="#">Каталог</a></li>
-                    <li className="menu__item"><a className="anchor header_menu_anchor" href="#">Расчет стоимости</a></li>
-                    <li className="menu__item"><a className="anchor header_menu_anchor" href="#">Партнеры</a></li>
-                    <li className="menu__item"><a className="anchor header_menu_anchor" href="#">Отзывы</a></li>
+                    <li className="menu__item">
+                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#catalog">Каталог</a>
+                    </li>
+                    <li className="menu__item">
+                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#calculation">Расчет стоимости</a>
+                    </li>
+                    <li className="menu__item">
+                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#reviews">Отзывы</a>
+                    </li>
+                    <li className="menu__item">
+                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#partners">Партнеры</a>
+                    </li>
                     
                     <li className="menu__item menu_right_items">
                             <RightItem className='r__item'
-                                img={mapMarker}
+                                img={mapMarker}onClick={() => (anchorClickHandler)()}
                                 alt='город'
                                 boldTxt={'Москва'}
                                 normalTxt={'Все города'}
