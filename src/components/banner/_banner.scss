@@ -38,17 +38,17 @@
     position: relative;
     top: -5px;
     left: 1px;
+    max-width: 80vw;
 }
 
 .banner__btn {
-    width: 173px;
-    height: 30px;
+    padding: 9px 10px;
 
     font-size: 12px;
 
     position: relative;
     margin-left: -1.5px;
-    margin-top: 14px;
+    margin-top: 13px;
 }
 
 @media (min-width: $bannerDesktopWidth) {
@@ -82,12 +82,11 @@
     }
 
     .banner__btn {
-        width: 328px;
-        height: 63px;
+        padding: 19px 33px;
         font-size: 20px;
 
         top: 29px;
-        left: 4px;
+        left: 5px;
     }
 }
 
@@ -118,8 +117,7 @@
     }
 
     .banner__btn {
-        height: 43px;
-        width: 228px;
+        padding: 19px 33px;
         font-size: 15px;
         top: 0;
     }
@@ -143,7 +141,7 @@
     }
 
     .banner__btn {
-        height: 40px;
+        padding: 9px 33px;
         font-size: 12px;
         top: -10px;
         left: 0;
@@ -185,5 +183,11 @@
 @media (min-width: $bannerDesktopWidth) and (max-width: $bannerAdaptiveWidth4) {
     .backgroundImage__banner {
         height: 220px;
+    }
+}
+
+@media (max-width: $AdvantagesAdaptiveSmallMobileWidth) {
+    .banner__container {
+        top: 10px;
     }
 }

@@ -56,18 +56,6 @@ export default function Advanatages () {
                             закрепляется при помощи болтов и гаек </h4>
                     </div>
                 </div>
-
-                <div className="advantage">
-                    <div className="advantage_img_container">
-                        <img src={img1} alt="изображение 1" className="advantage__image" />
-                    </div>
-                    <div className="advantage__txts">
-                        <h3 className="advantage__heading">Высокая прочность,
-                            жёсткость и надёжность</h3>
-                        <h4 className="advantage__description">По прочности  соединение с помощью 
-                            краб-системы ничем не уступает сварке</h4>
-                    </div>
-                </div>
             </div>
         </div>
     )
