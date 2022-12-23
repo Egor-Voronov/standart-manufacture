@@ -8,7 +8,9 @@
     overflow: hidden;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Sans&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans&family=Open+Sans:wght@400;700&display=swap');
+
+@layer utilities, base;
 
 .greenBtn {
     cursor: pointer;
@@ -31,6 +33,9 @@
     &:active {
         background-color: $darkGreen;
         transition: .3s linear;
+        &:active {
+            cursor: auto;
+        }
     }
 
     @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
@@ -56,3 +61,43 @@
     }
 }
 
+.outlineBtn {
+    background-color: #00000000;
+    border: 0.505226px solid #000000;
+    border-radius: 3px;
+    width: 115.64px;
+    height: 38.33px;
+
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: $black;
+    font-weight: 400;
+    font-size: 14.1254px;
+    line-height: 17px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $lightGray;
+        transition: .4 linear;
+
+        &:active {
+            cursor: auto;
+            background-color: $white;
+            transition: .4 linear;
+        }
+    }
+
+    &:active {
+        cursor: auto;
+        background-color: $white;
+        transition: .4 linear;
+    }
+
+    @media (min-width: $CatalogAdaptiveWidth) {
+        width: 125px;
+    }
+}
+
+body {
+    height: 200vh;
+}

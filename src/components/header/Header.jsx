@@ -9,13 +9,9 @@ import phone from '../../assets/phone.svg'
 export default function Header() {
     const [toggle, setToggle] = useState(false)
 
-    const toggleHandler = () => {
-        return setToggle(!toggle)
-    }
+    const toggleHandler = () => setToggle(!toggle)
 
-    const anchorClickHandler = () => {
-        return setToggle(false)
-    }
+    const anchorClickHandler = () => setToggle(false)
 
     const menuClassArr = ['header_menu_items']
     const headerClassArr = ['header']

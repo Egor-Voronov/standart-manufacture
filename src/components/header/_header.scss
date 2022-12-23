@@ -11,7 +11,7 @@
 
     font-family: 'Montserrat', sans-serif;
 
-    @extend %box-shadow;
+    @extend %boxShadowHeader;
 }
 
 .header__nav {
@@ -84,7 +84,7 @@
     }
 
     .header_menu_toggle {
-        width: 26px;
+        width: 29px;
         height: 35px;
 
         position: relative;
