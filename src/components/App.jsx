@@ -3,6 +3,7 @@ import Banner from "./banner/Banner"
 import Advanatages from "./advantages/Advantages"
 import Catalog from "./catalog/Catalog"
 import Advanatages2 from "./advantages/Advantages2"
+import Video from "./video/Video"
 
 function App() {
    return (
@@ -12,6 +13,7 @@ function App() {
       <Advanatages />
       <Catalog />
       <Advanatages2 />
+      <Video />
     </div>
   )
 }

@@ -9,11 +9,11 @@ export default function Catalog () {
             <div className="cards__container">
 
                 <div className="card__group">
-                    {Data.map(element => <CatalogCard {...element}/>)}
+                    {Data.map(element => <CatalogCard {...element} key={element.id}/>)}
                 </div>
 
                 <div className="card__group">
-                    {Data.map(element => <CatalogCard {...element}/>)}
+                    {Data.map(element => <CatalogCard {...element} key={element.id + 1}/>)}
                 </div>
 
             </div>
