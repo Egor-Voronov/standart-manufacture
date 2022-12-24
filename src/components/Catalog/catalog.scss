@@ -97,7 +97,7 @@
         box-sizing: padding-box;
         border: 0.480132px solid #C9C9C9;
         border-radius: 2.88079px;
-        width: 41.41px;
+        min-width: 41.41px;
         height: 22px;
         display: block;
         text-align: center;
@@ -144,6 +144,7 @@
 
     .card__body {
         width: 302px;
+        min-height: 376px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -181,12 +182,7 @@
             }   
         }
     }
-
-    .card__body {
-        width: 302px;
-        height: 376px;
-    }
-
+    
     .card__info {
         gap: 42px;
     }
