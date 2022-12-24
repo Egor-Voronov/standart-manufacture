@@ -3,7 +3,7 @@ import img2 from '../../assets/piggy.svg'
 import img3 from '../../assets/cycle.svg'
 import img4 from '../../assets/montage.svg'
 
-import Advantage from './advantage/advantage'
+import Advantage from './advantage/Advantage'
 
 export default function Advanatages () {
     return (
