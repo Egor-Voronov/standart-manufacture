@@ -35,6 +35,8 @@
 
     .video__container {
         height: 860px;
+        z-index: 40;
+        position: relative;
 
         width: 100%;
         max-width: $videoDesktopWidth;

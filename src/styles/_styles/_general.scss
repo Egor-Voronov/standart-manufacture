@@ -10,8 +10,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans&family=Open+Sans:wght@400;700&display=swap');
 
-@layer utilities, base;
-
 .greenBtn {
     cursor: pointer;
     background-color: $green;

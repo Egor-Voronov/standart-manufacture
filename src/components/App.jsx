@@ -4,6 +4,7 @@ import Advanatages from "./advantages/Advantages"
 import Catalog from "./catalog/Catalog"
 import Advanatages2 from "./advantages/Advantages2"
 import Video from "./video/Video"
+import Calculation from "./calculation/Calculation"
 
 function App() {
    return (
@@ -14,6 +15,7 @@ function App() {
       <Catalog />
       <Advanatages2 />
       <Video />
+      <Calculation />
     </div>
   )
 }
