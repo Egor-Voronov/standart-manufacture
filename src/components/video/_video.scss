@@ -1,86 +1,87 @@
 .video__body {
-    background-image: url(/background_crab.png);
-    height: 353px;
-    position: relative;
+  background-image: url(/background_crab.png);
+  height: 353px;
+  position: relative;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .video__heading {
-    position: relative;
-    margin-top: 42px;
+  position: relative;
+  margin-top: 42px;
 }
 
 .video {
-    z-index: 30;
-    position: relative;
-    margin-top: 40px;
+  z-index: 30;
+  position: relative;
+  margin-top: 40px;
 
-    width: 100%;
-    max-width: $videoDesktopWidth;
+  width: 100%;
+  max-width: $videoDesktopWidth;
 
-    &:active, &:hover, &:focus  {
-        outline: none;
-    }
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }
 
 .video_playPause_btn {
-    display: none;
+  display: none;
 }
 
 @media (min-width: $videoDesktopWidth) {
-    .video__body {
-        height: auto;
-        position: relative;
-        margin-top: -20px;
-    }
+  .video__body {
+    height: auto;
+    position: relative;
+    margin-top: -20px;
+  }
 
-    .video__container {
-        height: 860px;
-        z-index: 40;
-        position: relative;
+  .video__container {
+    height: 860px;
+    z-index: 40;
+    position: relative;
 
-        width: 100%;
-        max-width: $videoDesktopWidth;
-    }
+    width: 100%;
+    max-width: $videoDesktopWidth;
+  }
 
-    .video__heading {
-        margin-top: 72px;
-    }
+  .video__heading {
+    margin-top: 72px;
+  }
 
-    .video {
-        margin-top: 72px;
+  .video {
+    margin-top: 72px;
 
-        position: relative;
-    }
+    position: relative;
+  }
 
-    .video_playPause_btn {
-        position: absolute;
-        margin: 370px 580px;
-        z-index: 70;
+  .video_playPause_btn {
+    position: absolute;
+    margin: 370px 580px;
+    z-index: 70;
 
-        opacity: .8;
-    }
+    opacity: 0.8;
+  }
 
-    .play {
-        display: block;
-    }
-
+  .play {
+    display: block;
+  }
 }
 
 @media (max-width: $videoDesktopWidth) and (min-width: $AdvantagesAdaptiveDesktopWidth) {
-    .video__container {
-        width: 100%;
-        max-width: $videoDesktopWidth;
-    }
+  .video__container {
+    width: 100%;
+    max-width: $videoDesktopWidth;
+  }
 
-    .video__body {
-        height: auto;
-    }
+  .video__body {
+    height: auto;
+  }
 
-    .video {
-        width: 100%;
-    }
+  .video {
+    width: 100%;
+  }
 }

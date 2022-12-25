@@ -1,91 +1,91 @@
 .checkbox {
-    display: flex;
-    justify-self: flex-start;
+  display: flex;
+  justify-self: flex-start;
 
-    position: relative;
-    margin-left: -60px;
+  position: relative;
+  margin-left: -60px;
 
-    @media (min-width: $calculationAdaptiveWidth) { 
-      margin-left: -65px;
-    }
-
-    @media (min-width: $calculationAdaptiveWidth2) {
-      margin-left: -65px;
-    }
+  @media (min-width: $calculationAdaptiveWidth) {
+    margin-left: -65px;
   }
 
-  /* для элемента input c type="checkbox" */
-  .custom-checkbox {
-    input {
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-    }
+  @media (min-width: $calculationAdaptiveWidth2) {
+    margin-left: -65px;
   }
+}
 
-  /* для элемента label, связанного с .custom-checkbox */
-  .custom-checkbox {
-      span {
-          display: inline-flex;
-          align-items: center;
-          user-select: none;
-
-          font-family: 'Montserrat', sans-serif;
-          color: $checkboxLightGray;
-          font-weight: 400;
-          font-size: 5.89577px;
-          line-height: 130%;
-
-          @media (min-width: $calculationAdaptiveWidth2) { 
-            font-size: 11px;
-          }
-
-          &::before {
-              content: '';
-              display: inline-block;
-              width: 8.5px;
-              height: 8.58px;
-              @media (min-width: $calculationAdaptiveWidth2) { 
-                width: 14px;
-                height: 14px;
-              }
-            
-              flex-shrink: 0;
-              flex-grow: 0;
-              border: 1px solid $green;
-              border-radius: 2px;
-              margin-right: 0.5em;
-              background-repeat: no-repeat;
-              background-position: center center;
-              background-size: 50% 50%;
-          }
-      }
-
-      input {   
-          &:not(:disabled):active+span::before {
-              background-color: $green;
-              border-color: $green;
-          }
-
-          &:checked+span::before {
-            border-color: $green;
-            background-color: $green;
-            background-image: url(/checkbox.svg);
-          }
-      }
+/* для элемента input c type="checkbox" */
+.custom-checkbox {
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
   }
+}
 
-  .checkbox__anchor {
-    position: relative;
-    left: 2px;
-    cursor: pointer;
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox {
+  span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: $checkboxLightGray;
     font-weight: 400;
     font-size: 5.89577px;
-    @media (min-width: $calculationAdaptiveWidth2) { 
+    line-height: 130%;
+
+    @media (min-width: $calculationAdaptiveWidth2) {
       font-size: 11px;
     }
-    line-height: 130%;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 8.5px;
+      height: 8.58px;
+      @media (min-width: $calculationAdaptiveWidth2) {
+        width: 14px;
+        height: 14px;
+      }
+
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid $green;
+      border-radius: 2px;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+
+  input {
+    &:not(:disabled):active + span::before {
+      background-color: $green;
+      border-color: $green;
+    }
+
+    &:checked + span::before {
+      border-color: $green;
+      background-color: $green;
+      background-image: url(/checkbox.svg);
+    }
+  }
+}
+
+.checkbox__anchor {
+  position: relative;
+  left: 2px;
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  color: $checkboxLightGray;
+  font-weight: 400;
+  font-size: 5.89577px;
+  @media (min-width: $calculationAdaptiveWidth2) {
+    font-size: 11px;
+  }
+  line-height: 130%;
 }

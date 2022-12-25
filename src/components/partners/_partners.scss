@@ -1,72 +1,75 @@
 .partners__body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .partners__heading {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .partners__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 49px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 49px;
+  flex-wrap: wrap;
 
-    position: relative;
-    margin-top: 40px;
+  position: relative;
+  margin-top: 40px;
 }
 
 .partner {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .partner1 {
-    width: 249.1px;
+  width: 249.1px;
 }
 
 .partner2 {
-    width: 269.1px;
+  width: 269.1px;
 }
 
 .partner3 {
-    width: 209.1px;
+  width: 209.1px;
 
-    position: relative;
-    margin-top: 5px;
+  position: relative;
+  margin-top: 5px;
 }
-
 
 @media (min-width: $partnersAdaptiveWidth) {
-    .partners__body {
-        position: relative;
-        padding-top: 37px;
-    }
+  .partners__body {
+    position: relative;
+    padding-top: 37px;
+  }
 
-    .partners__container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 75px;
-        max-width: 1276px;
-        gap: 80px;
-    }
+  .partners__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 75px;
+    max-width: 1276px;
+    gap: 80px;
+  }
 
-    .partner1 {
-        width: 384px;
-        height: 126px;
-    }
+  .partner1 {
+    width: 384px;
+    height: 126px;
+  }
 
-    .partner2 {
-        width: 410px;
-        height: 98px;
-    }
+  .partner2 {
+    width: 410px;
+    height: 98px;
+  }
 
-    .partner3 {
-        width: 322px;
-        height: 100px;
-    }
+  .partner3 {
+    width: 322px;
+    height: 100px;
+  }
+
+  #partners {
+    position: absolute;
+    margin-top: -100px;
+  }
 }
-

@@ -1,186 +1,182 @@
-
 .header {
-    width: 100%;
-    background: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 99;
-    margin-top: -14px;
+  width: 100%;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  margin-top: -14px;
 
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
-    @extend %boxShadowHeader;
+  @extend %boxShadowHeader;
 }
 
 .header__nav {
-    width: 1380px;
+  width: 1380px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
 
-    position: relative;
-    margin-left: -84.5px;
-    top: 14px;
+  position: relative;
+  margin-left: -84.5px;
+  top: 14px;
 }
 
 .logo {
-    width: 220px;
-    height: 54.59px;
+  width: 220px;
+  height: 54.59px;
 }
 
 .menu__item {
-    float: left;
-    list-style-type: none;
-    margin: 21px;
+  float: left;
+  list-style-type: none;
+  margin: 21px;
 }
 
 .header_menu_anchor {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24.38px;
-    @extend %anchor;
-    cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.38px;
+  @extend %anchor;
+  cursor: pointer;
 }
 
-
 .header_menu_toggle {
-    display: none;
-    /* border-radius: 5px; */
+  display: none;
+  /* border-radius: 5px; */
 }
 
 @media (max-width: $headerMobileWidth) {
-    .header {
-        z-index: 99;
-        
+  .header {
+    z-index: 99;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    text-align: center;
+
+    position: relative;
+    margin-left: 0;
+    top: 0;
+  }
+
+  .header__nav {
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .header__logo {
+    position: relative;
+    top: 1.5px;
+    left: -11px;
+  }
+
+  .header_menu_toggle {
+    width: 29px;
+    height: 35px;
+
+    position: relative;
+    top: -1.5px;
+    left: 10px;
+  }
+
+  .menu__item {
+    float: none;
+    animation: slide 0.5s linear 1;
+    @media (max-height: $headerMobileHeight2) {
+      float: left;
     }
+  }
 
-    .header__nav {
-        flex-direction: column;
-        text-align: center;
+  @keyframes slide {
+    0% {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
 
+  .header_menu_anchor {
+    font-size: 20px;
+    &:hover::after,
+    &:focus::after {
+      @media (max-width: $headerMobileWidth) {
         position: relative;
-        margin-left: 0;
-        top: 0;
+        left: 15%;
+        width: 70%;
+      }
     }
+  }
 
-    .header__nav {
-        justify-content: space-around;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+  .header_menu_items {
+    margin-top: 0px;
+    display: none;
+  }
 
-    .logo {
-        width: 120px;
-    }
+  .header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .header__logo {
-        position: relative;
-        top: 1.5px;
-        left: -11px;
-    }
+  .header_menu_toggle {
+    font-size: 30px;
+    display: block;
+    color: #eee;
+  }
 
-    .header_menu_toggle {
-        width: 29px;
-        height: 35px;
+  //служебные классы, которые я навешиваю динамически
+  .menu_toggle_opened {
+    display: block;
+  }
 
-        position: relative;
-        top: -1.5px;
-        left: 10px;
-    }
+  .menu_toggle_closed {
+    display: none;
+  }
 
-    .menu__item {
-        float: none;
-        animation: slide .5s linear 1;
-        @media (max-height: $headerMobileHeight2) {
-            float: left;
-        }
-    }
+  .header_closed_height {
+    height: 56px;
+  }
 
-    @keyframes slide {
-        0%{
-            transform: translateX(50px);
-            opacity: 0;
-        }
-        100%{
-            transform: translateX(0px);
-            opacity: 1;
-        }
-    }
-
-    .header_menu_anchor {
-        font-size: 20px;
-            &:hover::after,
-            &:focus::after {
-                @media (max-width: $headerMobileWidth) {
-                    position: relative;
-                    left: 15%;
-                    width: 70%;
-                }
-            }
-    }
-
-    .header_menu_items {
-        margin-top: 0px;
-        display: none;
-    }
-
+  .header_open_height {
     .header__menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
+      top: -31.2px;
+      position: relative;
+      @media (orientation: landscape) {
+        top: -26.2px;
+      }
     }
-    
-    .header_menu_toggle {
-        font-size: 30px;
-        display: block;
-        color: #eee;
-    }
+  }
 
-    //служебные классы, которые я навешиваю динамически
-    .menu_toggle_opened {
-        display: block;
+  @media (orientation: landscape) {
+    .header__menu {
+      position: relative;
+      top: 5px;
     }
-    
-    .menu_toggle_closed {
-        display: none;
-    }
-
-    .header_closed_height {
-        height: 56px;
-    }
-
-    .header_open_height {
-        .header__menu {
-            top: -31.2px;
-            position: relative;
-            @media (orientation: landscape) {
-                top: -26.2px;
-            }
-        }
-    }
-
-    @media (orientation: landscape) {
-        .header__menu {
-            position: relative;
-            top: 5px;
-        }
-    }
+  }
 }
 
-
 @media (min-width: calc($headerMobileWidth + 1px)) {
-    .header {
-        max-height: 130px;
-    }
+  .header {
+    max-height: 130px;
+  }
 
-    .header__logo {
-        position: relative;
-        top: -4px;
-        right: -57px;
-    }
+  .header__logo {
+    position: relative;
+    top: -4px;
+    right: -57px;
+  }
 }

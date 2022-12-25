@@ -1,17 +1,17 @@
-$green: #319F01;
+$green: #319f01;
 $black: #000;
-$red: #E1322D;
+$red: #e1322d;
 $white: #fff;
-$gray: #6C6C6C;
+$gray: #6c6c6c;
 $darkGreen: #298601;
-$lightGreen: #3BBB03;
-$beige: #F2EFED;
-$lightGray: #F0F0F0;
-$opacityGray: rgba(#979797, .6);
-$darkBlue: #2E363E;
-$inputLightGray: #7A7A7A;
-$checkboxLightGray: #7E868E;
-$reviewBorder: #CECECE;
+$lightGreen: #3bbb03;
+$beige: #f2efed;
+$lightGray: #f0f0f0;
+$opacityGray: rgba(#979797, 0.6);
+$darkBlue: #2e363e;
+$inputLightGray: #7a7a7a;
+$checkboxLightGray: #7e868e;
+$reviewBorder: #cecece;
 
 $headerMobileWidth: 1273px;
 $headerMobileHeight1: 439px;
@@ -39,51 +39,52 @@ $partnersAdaptiveWidth: 950px;
 
 $reviewsAdaptiveWidth: 950px;
 
+$footerAdaptiveWidth: 600px;
+
 %anchor {
-    color: $black;
+  color: $black;
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+
+  &::after {
+    background-color: $black;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    -webkit-transition: width 0.4s ease-in-out;
+    -moz--transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+    transition: 0.4s ease-in-out;
+  }
+
+  &:active {
+    color: $gray;
     text-decoration: none;
-    transition: .4s ease-in-out;
-    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    cursor: auto;
 
     &::after {
-        background-color: $black;
-        display: block;
-        content: "";
-        height: 2px;
-        width: 0%;
-        -webkit-transition: width .4s ease-in-out;
-        -moz--transition: width .4s ease-in-out;
-        transition: width .4s ease-in-out;
+      display: none;
+      transition: 0.4s ease-in-out;
     }
-
-    &:hover::after,
-    &:focus::after {
-        width: 100%;
-        transition: .4s ease-in-out;
-    }
-
-    &:active {
-        color: $gray;
-        text-decoration: none;
-        transition: .4s ease-in-out;
-        cursor: auto;
-        
-        &::after {
-            display: none;
-            transition: .4s ease-in-out;
-        }
-
-    }
+  }
 }
 
 %boxShadowHeader {
-    box-shadow: 0px 4px 8px rgba(79, 79, 79, 0.14);
+  box-shadow: 0px 4px 8px rgba(79, 79, 79, 0.14);
 }
 
 %boxShadowCatalog {
-    box-shadow: 0px 4.90486px 11.0359px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4.90486px 11.0359px rgba(0, 0, 0, 0.15);
 }
 
 // %montserratBold {
 
-// } 
+// }

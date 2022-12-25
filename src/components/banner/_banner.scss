@@ -1,193 +1,193 @@
 .backgroundImage__banner {
-    width: 100%;
-    height: 220px;
-    background-image: url(/bannerMobile.png);
-    background-color: $white;
-    position: relative;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    top: 42px;
+  width: 100%;
+  height: 220px;
+  background-image: url(/bannerMobile.png);
+  background-color: $white;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 42px;
 
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .banner__container {
-    position: relative;
-    left: 18px;
-    top: 32px;
+  position: relative;
+  left: 18px;
+  top: 32px;
 }
 
 .banner__item {
-    margin-top: 14px;
+  margin-top: 14px;
 }
 
 .banner__heading {
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-size: 21px;
-    font-weight: 700;
-    color: $black;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 21px;
+  font-weight: 700;
+  color: $black;
 }
 
 .banner__description {
-    font-weight: 400;
-    font-size: 11.41009px;
-    line-height: 13px;
-    color: $black;
+  font-weight: 400;
+  font-size: 11.41009px;
+  line-height: 13px;
+  color: $black;
 
-    position: relative;
-    top: -5px;
-    left: 1px;
-    max-width: 80vw;
+  position: relative;
+  top: -5px;
+  left: 1px;
+  max-width: 80vw;
 }
 
 .banner__btn {
-    padding: 9px 10px;
+  padding: 9px 10px;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    position: relative;
-    margin-left: -1.5px;
-    margin-top: 13px;
+  position: relative;
+  margin-left: -1.5px;
+  margin-top: 13px;
 }
 
 @media (min-width: $bannerDesktopWidth) {
-    .backgroundImage__banner {
-        background-image: url(/bannerDesktop.png);
-        height: 675px;
-        top: 115px;
+  .backgroundImage__banner {
+    background-image: url(/bannerDesktop.png);
+    height: 675px;
+    top: 115px;
 
-        display: flex;
-        justify-content: center;
-    }
+    display: flex;
+    justify-content: center;
+  }
 
-    .banner__container {
-        width: 1280px;
-        left: 0px;
-        top: 118px;
-    }
+  .banner__container {
+    width: 1280px;
+    left: 0px;
+    top: 118px;
+  }
 
-    .banner__heading {
-        font-size: 72px;
-        letter-spacing: -0.025em;
-    }
+  .banner__heading {
+    font-size: 72px;
+    letter-spacing: -0.025em;
+  }
 
-    .banner__description {
-        font-size: 32px;
-        line-height: 40px;
-        
-        top: -12px;
-        left: 7px;
-        letter-spacing: 0.015em;
-    }
+  .banner__description {
+    font-size: 32px;
+    line-height: 40px;
 
-    .banner__btn {
-        padding: 19px 33px;
-        font-size: 20px;
+    top: -12px;
+    left: 7px;
+    letter-spacing: 0.015em;
+  }
 
-        top: 29px;
-        left: 5px;
-    }
+  .banner__btn {
+    padding: 19px 33px;
+    font-size: 20px;
+
+    top: 29px;
+    left: 5px;
+  }
 }
 
 @media (min-width: $bannerDesktopWidth) and (max-width: $bannerAdaptiveWidth1) {
-    .backgroundImage__banner {
-        background-size: cover;
-        background-size: 110%;
-        background-repeat: no-repeat;
+  .backgroundImage__banner {
+    background-size: cover;
+    background-size: 110%;
+    background-repeat: no-repeat;
 
-        height: 260px;
+    height: 260px;
 
-        top: 42px;
-    }
+    top: 42px;
+  }
 
-    .banner__container {
-        top: 0;
-        left: 100px;
-    }
+  .banner__container {
+    top: 0;
+    left: 100px;
+  }
 
-    .banner__heading {
-        font-size: 33px;
-    }
+  .banner__heading {
+    font-size: 33px;
+  }
 
-    .banner__description {
-        font-size: 21px;
-        line-height: 30px;
-        left: 0;
-    }
+  .banner__description {
+    font-size: 21px;
+    line-height: 30px;
+    left: 0;
+  }
 
-    .banner__btn {
-        padding: 19px 33px;
-        font-size: 15px;
-        top: 0;
-    }
+  .banner__btn {
+    padding: 19px 33px;
+    font-size: 15px;
+    top: 0;
+  }
 }
 
 @media (min-width: $bannerDesktopWidth) and (max-width: $bannerAdaptiveWidth2) {
-    .backgroundImage__banner {
-        height: 250px;
-    }
-    
-    .banner__container {
-        top: -10px;
-    }
+  .backgroundImage__banner {
+    height: 250px;
+  }
 
-    .banner__heading {
-        font-size: 30px;
-    }
+  .banner__container {
+    top: -10px;
+  }
 
-    .banner__description {
-        font-size: 18px;
-    }
+  .banner__heading {
+    font-size: 30px;
+  }
 
-    .banner__btn {
-        padding: 9px 33px;
-        font-size: 12px;
-        top: -10px;
-        left: 0;
-    }
+  .banner__description {
+    font-size: 18px;
+  }
+
+  .banner__btn {
+    padding: 9px 33px;
+    font-size: 12px;
+    top: -10px;
+    left: 0;
+  }
 }
 
 @media (min-width: $headerMobileWidth) and (max-width: $bannerAdaptiveWidth1) {
-    .backgroundImage__banner {
-        top: 116px;
-    }
+  .backgroundImage__banner {
+    top: 116px;
+  }
 }
 
 @media (min-width: $bannerAdaptiveWidth1) and (max-width: $bannerAdaptiveWidth3) {
-    .backgroundImage__banner {
-        height: 445px;
-    }
+  .backgroundImage__banner {
+    height: 445px;
+  }
 }
 
 @media (min-width: $bannerAdaptiveWidth1) and (max-width: $bannerAdaptiveWidth3) {
-    .backgroundImage__banner {
-        height: 550px;
-    }
+  .backgroundImage__banner {
+    height: 550px;
+  }
 
-    .banner__container {
-        top: 20px;
-    }
+  .banner__container {
+    top: 20px;
+  }
 }
 
 @media (min-width: $headerMobileWidth) and (max-width: $bannerAdaptiveWidth1) {
-    .backgroundImage__banner {
-        height: 530px;
-    }
+  .backgroundImage__banner {
+    height: 530px;
+  }
 
-    .banner__container {
-        top: 20px;
-    }
+  .banner__container {
+    top: 20px;
+  }
 }
 
 @media (min-width: $bannerDesktopWidth) and (max-width: $bannerAdaptiveWidth4) {
-    .backgroundImage__banner {
-        height: 220px;
-    }
+  .backgroundImage__banner {
+    height: 220px;
+  }
 }
 
 @media (max-width: $AdvantagesAdaptiveSmallMobileWidth) {
-    .banner__container {
-        top: 10px;
-    }
+  .banner__container {
+    top: 10px;
+  }
 }

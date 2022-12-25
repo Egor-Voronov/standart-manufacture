@@ -1,64 +1,64 @@
-import { useState } from "react"
-import bars from '../../assets/bars.svg'
-import cross from '../../assets/cross.svg'
-import logo from '../../assets/Logo.svg'
-import RightItem from "./RightItems/RightItem"
-import mapMarker from '../../assets/map-marker.svg'
-import phone from '../../assets/phone.svg'
+import { useState } from "react";
+import bars from "../../assets/bars.svg";
+import cross from "../../assets/cross.svg";
+import logo from "../../assets/Logo.svg";
+import RightItem from "./RightItems/RightItem";
+import mapMarker from "../../assets/map-marker.svg";
+import phone from "../../assets/phone.svg";
 
 export default function Header() {
-    const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false)
 
-    const toggleHandler = () => setToggle(!toggle)
+  const toggleHandler = () => setToggle(!toggle)
 
-    const anchorClickHandler = () => setToggle(false)
+  const anchorClickHandler = () => setToggle(false)
 
-    const menuClassArr = ['header_menu_items']
-    const headerClassArr = ['header']
-    const toggleImg = toggle ? cross : bars
+  const menuClassArr = ['header_menu_items']
+  const headerClassArr = ['header']
+  const toggleImg = toggle ? cross : bars
 
-    toggle ? menuClassArr[1] = 'menu_toggle_opened' : menuClassArr[1] = 'menu_toggle_closed'
-    toggle ? headerClassArr[1] = 'header_open_height' : headerClassArr[1] = 'header_closed_height'
+  toggle ? menuClassArr[1] = 'menu_toggle_opened' : menuClassArr[1] = 'menu_toggle_closed'
+  toggle ? headerClassArr[1] = 'header_open_height' : headerClassArr[1] = 'header_closed_height'
 
-    return (
-        <header className={headerClassArr.join(' ')} >
-            <nav className="header__nav">
-                <div className="header__menu">
-                    <a href={window.location.href}><img src={logo} alt="логотип" className="logo header__logo" /></a>
-                    <img src={toggleImg} alt="открыть / закрыть навигацию" onClick={() => (toggleHandler)()} className='header_menu_toggle' />
-                </div>
-                <ul className={menuClassArr.join(' ')}>
-                    <li className="menu__item">
-                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#catalog">Каталог</a>
-                    </li>
-                    <li className="menu__item">
-                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#calculation">Расчет стоимости</a>
-                    </li>
-                    <li className="menu__item">
-                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#partners">Партнеры</a>
-                    </li>
-                    <li className="menu__item">
-                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#reviews">Отзывы</a>
-                    </li>
-                    
-                    <li className="menu__item menu_right_items">
-                            <RightItem className='r__item'
-                                img={mapMarker}onClick={() => (anchorClickHandler)()}
-                                alt='город'
-                                boldTxt={'Москва'}
-                                normalTxt={'Все города'}
-                                isCity={true}
-                            />
-                            <RightItem className='r_item'
-                                img={phone}
-                                alt='телефон'
-                                boldTxt={'8-985-344-76-46'}
-                                normalTxt={'Заказать звонок'}
-                                isCity={false}
-                            />
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    )
+  return (
+      <header className={headerClassArr.join(' ')} >
+          <nav className="header__nav">
+              <div className="header__menu">
+                  <a href={window.location.href}><img src={logo} alt="логотип" className="logo header__logo" /></a>
+                  <img src={toggleImg} alt="открыть / закрыть навигацию" onClick={() => (toggleHandler)()} className='header_menu_toggle' />
+              </div>
+              <ul className={menuClassArr.join(' ')}>
+                  <li className="menu__item">
+                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#catalog">Каталог</a>
+                  </li>
+                  <li className="menu__item">
+                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#calculation">Расчет стоимости</a>
+                  </li>
+                  <li className="menu__item">
+                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#partners">Партнеры</a>
+                  </li>
+                  <li className="menu__item">
+                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#reviews">Отзывы</a>
+                  </li>
+                  
+                  <li className="menu__item menu_right_items">
+                          <RightItem className='r__item'
+                              img={mapMarker}onClick={() => (anchorClickHandler)()}
+                              alt='город'
+                              boldTxt={'Москва'}
+                              normalTxt={'Все города'}
+                              isCity={true}
+                          />
+                          <RightItem className='r_item'
+                              img={phone}
+                              alt='телефон'
+                              boldTxt={'8-985-344-76-46'}
+                              normalTxt={'Заказать звонок'}
+                              isCity={false}
+                          />
+                  </li>
+              </ul>
+          </nav>
+      </header>
+  )
 }

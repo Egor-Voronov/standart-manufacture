@@ -1,99 +1,99 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans&family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans&family=Open+Sans:wght@400;700&display=swap");
 
 .greenBtn {
-    cursor: pointer;
-    background-color: $green;
-    border: 0;
-    transition: .3s linear;
-    border-radius: 3px;
+  cursor: pointer;
+  background-color: $green;
+  border: 0;
+  transition: 0.3s linear;
+  border-radius: 3px;
 
-    font-family: 'Open Sans', sans-serif;
-    line-height: 13.62px;
-    color: $white;
-    font-weight: 700;
-    text-align: center;
-    max-width: 80vw;
+  font-family: "Open Sans", sans-serif;
+  line-height: 13.62px;
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+  max-width: 80vw;
 
-    &:hover {
-        background-color: $lightGreen;
-        transition: .3s linear;
-    }
+  &:hover {
+    background-color: $lightGreen;
+    transition: 0.3s linear;
+  }
+  &:active {
+    background-color: $darkGreen;
+    transition: 0.3s linear;
     &:active {
-        background-color: $darkGreen;
-        transition: .3s linear;
-        &:active {
-            cursor: auto;
-        }
+      cursor: auto;
     }
+  }
 
-    @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
-        line-height: 23.62px;
-    }
+  @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
+    line-height: 23.62px;
+  }
 }
 
 .heading {
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: $black;
-    z-index: 80;
-    position: relative;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: $black;
+  z-index: 80;
+  position: relative;
 
-    @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
-        font-size: 40px;
-        line-height: 54px;
-        letter-spacing: -0.02em;
-    }
+  @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+  }
 }
 
 .outlineBtn {
-    background-color: #00000000;
-    border: 0.505226px solid #000000;
-    border-radius: 3px;
-    width: 115.64px;
-    height: 38.33px;
+  background-color: #00000000;
+  border: 0.505226px solid #000000;
+  border-radius: 3px;
+  width: 115.64px;
+  height: 38.33px;
 
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    color: $black;
-    font-weight: 400;
-    font-size: 14.1254px;
-    line-height: 17px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: $black;
+  font-weight: 400;
+  font-size: 14.1254px;
+  line-height: 17px;
 
-    &:hover {
-        cursor: pointer;
-        background-color: $lightGray;
-        transition: .4 linear;
-
-        &:active {
-            cursor: auto;
-            background-color: $white;
-            transition: .4 linear;
-        }
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: $lightGray;
+    transition: 0.4 linear;
 
     &:active {
-        cursor: auto;
-        background-color: $white;
-        transition: .4 linear;
+      cursor: auto;
+      background-color: $white;
+      transition: 0.4 linear;
     }
+  }
 
-    @media (min-width: $CatalogAdaptiveWidth) {
-        width: 125px;
-    }
+  &:active {
+    cursor: auto;
+    background-color: $white;
+    transition: 0.4 linear;
+  }
+
+  @media (min-width: $CatalogAdaptiveWidth) {
+    width: 125px;
+  }
 }
 
 // body {
