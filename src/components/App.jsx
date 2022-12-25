@@ -6,6 +6,9 @@ import Advanatages2 from "./advantages/Advantages2"
 import Video from "./video/Video"
 import Calculation from "./calculation/Calculation"
 
+
+import Map from "./map/Geo"
+
 function App() {
    return (
     <div className="App">
@@ -15,7 +18,10 @@ function App() {
       <Catalog />
       <Advanatages2 />
       <Video />
-      <Calculation />
+      {/* <Calculation /> */}
+
+
+      <Map />
     </div>
   )
 }
