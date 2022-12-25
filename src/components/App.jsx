@@ -21,7 +21,7 @@ function App() {
       <Calculation />
       <Partners />
       <Reviews />
-      {/* <Map /> */}
+      <Map />
     </div>
   )
 }

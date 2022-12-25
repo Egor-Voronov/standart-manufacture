@@ -1,14 +1,13 @@
 .geo__body {
     position: relative;
-    padding-top: 40px;
+    padding-top: 25px;
 }
 
 .map {
-    width: 100vw;
     height: 203px;
 
     position: relative;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
 .map__hover {
@@ -24,13 +23,13 @@
 
     p {
         position: relative;
-        top: 50%;
+        top: 55%;
 
         text-align: center;
         color: white;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
-        font-size: 13px;
+        font-size: 15px;
         line-height: 18px
     }
 }
@@ -40,11 +39,19 @@
 }
 
 @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
+    .geo__body {
+        position: relative;
+        margin-top: 30px;
+    }
+
     .map__hover {
         display: none;
     }
 
     .map {
-        height: 576px;
+        position: relative;
+        margin-top: 77px;
+
+        height: 574px;
     }
 }
