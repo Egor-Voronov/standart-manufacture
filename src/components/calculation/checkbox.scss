@@ -3,7 +3,15 @@
     justify-self: flex-start;
 
     position: relative;
-    margin-left: -65px;
+    margin-left: -60px;
+
+    @media (min-width: $calculationAdaptiveWidth) { 
+      margin-left: -65px;
+    }
+
+    @media (min-width: $calculationAdaptiveWidth2) {
+      margin-left: -105px;
+    }
   }
 
   /* для элемента input c type="checkbox" */
@@ -25,7 +33,7 @@
           font-family: 'Montserrat', sans-serif;
           color: $checkboxLightGray;
           font-weight: 400;
-          font-size: 11px;
+          font-size: 5.89577px;
           line-height: 130%;
 
           &::before {
@@ -33,14 +41,14 @@
               display: inline-block;
               width: 8.5px;
               height: 8.58px;
-              @media (min-width: $AdvantagesAdaptiveDesktopWidth) { 
+              @media (min-width: $calculationAdaptiveWidth2) { 
                 width: 14px;
                 height: 14px;
               }
             
               flex-shrink: 0;
               flex-grow: 0;
-              border: 0.26799px solid $green;
+              border: 1px solid $green;
               border-radius: 2px;
               margin-right: 0.5em;
               background-repeat: no-repeat;
@@ -71,6 +79,9 @@
     font-family: 'Montserrat', sans-serif;
     color: $checkboxLightGray;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 5.89577px;
+    @media (min-width: $calculationAdaptiveWidth2) { 
+      font-size: 11px;
+    }
     line-height: 130%;
 }

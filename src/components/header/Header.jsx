@@ -35,10 +35,10 @@ export default function Header() {
                         <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#calculation">Расчет стоимости</a>
                     </li>
                     <li className="menu__item">
-                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#reviews">Отзывы</a>
+                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#partners">Партнеры</a>
                     </li>
                     <li className="menu__item">
-                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#partners">Партнеры</a>
+                        <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#reviews">Отзывы</a>
                     </li>
                     
                     <li className="menu__item menu_right_items">
