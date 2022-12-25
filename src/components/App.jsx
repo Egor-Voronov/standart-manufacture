@@ -6,7 +6,7 @@ import Advanatages2 from "./advantages/Advantages2"
 import Video from "./video/Video"
 import Calculation from "./calculation/Calculation"
 import Partners from "./partners/Partners"
-
+import Reviews from "./reviews/Reviews"
 import Map from "./map/Geo"
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <Video />
       <Calculation />
       <Partners />
-
+      <Reviews />
       {/* <Map /> */}
     </div>
   )
