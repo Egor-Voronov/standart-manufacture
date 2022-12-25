@@ -10,7 +10,7 @@
     }
 
     @media (min-width: $calculationAdaptiveWidth2) {
-      margin-left: -105px;
+      margin-left: -65px;
     }
   }
 
@@ -35,6 +35,10 @@
           font-weight: 400;
           font-size: 5.89577px;
           line-height: 130%;
+
+          @media (min-width: $calculationAdaptiveWidth2) { 
+            font-size: 11px;
+          }
 
           &::before {
               content: '';
