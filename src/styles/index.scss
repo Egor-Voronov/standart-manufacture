@@ -5,13 +5,13 @@
 //локальные стили
 @import "src/components/header/header";
 @import "src/components/header/RightItems/RightItem";
-@import "src/components/banner/banner.scss";
+@import "src/components/banner/banner";
 @import "src/components/advantages/advanatages";
 @import "src/components/catalog/catalog";
 @import "src/components/advantages/advanatages2";
 @import "src/components/video/video";
 @import "src/components/calculation/calculation";
-@import "src/components/calculation/checkbox.scss";
+@import "src/components/calculation/checkbox";
+@import "src/components/partners/partners";
 
-
-@import "/src/components/map/map";
+@import "src/components/map/map";

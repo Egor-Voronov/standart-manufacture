@@ -5,7 +5,7 @@ import Catalog from "./catalog/Catalog"
 import Advanatages2 from "./advantages/Advantages2"
 import Video from "./video/Video"
 import Calculation from "./calculation/Calculation"
-
+import Partners from "./partners/Partners"
 
 import Map from "./map/Geo"
 
@@ -19,7 +19,7 @@ function App() {
       <Advanatages2 />
       <Video />
       <Calculation />
-
+      <Partners />
 
       {/* <Map /> */}
     </div>

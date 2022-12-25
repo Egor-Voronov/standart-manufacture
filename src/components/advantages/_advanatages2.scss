@@ -3,17 +3,16 @@
         gap: 21.5px;
     }
 
-
     @media (min-width: $AdvantagesAdaptiveDesktopWidth) {
         .advantages__heading {
             margin-top: 35px;
         }
         
         .advantages__container {
-            max-width: 1232px;
+            max-width: 1272px;
             display: flex;
             justify-content: space-around;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             margin-top: 75px;
             gap: 20px;
         }
