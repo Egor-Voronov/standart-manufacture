@@ -1,6 +1,6 @@
 .video__body {
     background-image: url(/background_crab.png);
-    height: 361px;
+    height: 353px;
     position: relative;
 
     display: flex;
@@ -20,6 +20,10 @@
 
     width: 100%;
     max-width: $videoDesktopWidth;
+
+    &:active, &:hover, &:focus  {
+        outline: none;
+    }
 }
 
 .video_playPause_btn {

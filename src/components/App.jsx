@@ -18,10 +18,10 @@ function App() {
       <Catalog />
       <Advanatages2 />
       <Video />
-      {/* <Calculation /> */}
+      <Calculation />
 
 
-      <Map />
+      {/* <Map /> */}
     </div>
   )
 }
