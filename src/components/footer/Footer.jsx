@@ -11,7 +11,7 @@ export default function Footer() {
 
           <div className="footer__city">
             <img src={mapMarker} alt="город" />
-            <a href="#">{"Москва, ул. Лениниа, д. 25"}</a>
+            <a href="#">{"Москва, ул. Ленина, д. 25"}</a>
           </div>
 
           <div className="footer__phone">
