@@ -8,7 +8,7 @@ import Advantage from "./advantage/Advantage";
 export default function Advanatages2({isSecondAdvantage}) {
   return (
     <div className={isSecondAdvantage ? 'advantages__body advantages2' : 'advantages__body'}>
-      <h2 className="heading advantages__heading">Почему мы?</h2>
+      <h2 className="heading advantages__heading">{isSecondAdvantage ? "Почему мы?" : 'преимущества системы'}</h2>
       <div className="advantages__container">
         {isSecondAdvantage ?(
           <>
