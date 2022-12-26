@@ -1,0 +1,219 @@
+.catalog__body {
+  width: 100%;
+  padding: 0 15px;
+  background-color: $beige;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog__heading {
+  position: relative;
+  top: 43px;
+}
+
+.cards__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 8px;
+
+  margin-top: 82px;
+  margin-bottom: 5px;
+}
+
+.card__group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &:nth-child(2n) {
+    .card__name {
+      top: -5px;
+    }
+
+    .card_btn_container {
+      top: 0px;
+    }
+
+    .card_pricing {
+      top: -2px;
+    }
+  }
+}
+
+.card__body {
+  width: 400px;
+  width: 100%;
+  min-height: 370.27px;
+  background-color: $white;
+  border-radius: 1.83932px;
+  @extend %boxShadowCatalog;
+
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 31.5px;
+  }
+}
+
+.card__image {
+  width: 100%;
+  height: 216.93px;
+  border-radius: 1.83932px;
+  cursor: pointer;
+}
+
+.card__info {
+  color: $black;
+  padding: 18px 23.5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card__name {
+  position: relative;
+  top: -2px;
+}
+
+.notoSans_card {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12.1254px;
+  line-height: 17px;
+  letter-spacing: 0.11em;
+}
+
+.card_pricing {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  top: 2px;
+
+  div {
+    box-sizing: padding-box;
+    border: 0.480132px solid #c9c9c9;
+    border-radius: 2.88079px;
+    min-width: 41.41px;
+    height: 22px;
+    display: block;
+    text-align: center;
+
+    position: relative;
+    right: 5px;
+  }
+
+  span {
+    position: relative;
+    top: 2px;
+  }
+}
+
+.pricing__price {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+
+  line-height: 20px;
+}
+
+.pricing__amount {
+  display: flex;
+  position: relative;
+  right: 5px;
+}
+
+.card_btn_container {
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+  top: 5px;
+}
+
+@media (min-width: $CatalogAdaptiveWidth) {
+  .card__body {
+    position: relative;
+    margin-top: -30px;
+  }
+
+  .catalog__heading {
+    top: 48px;
+  }
+
+  .card__body {
+    width: 302px;
+    min-height: 376px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cards__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 65px;
+
+    gap: 20px;
+  }
+
+  .card__group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &:nth-child(2n) {
+      .card__name {
+        margin-top: 2px;
+      }
+
+      .card_btn_container {
+        top: -25px;
+      }
+
+      .card_pricing {
+        top: -2px;
+      }
+    }
+  }
+
+  .card__info {
+    gap: 42px;
+  }
+
+  .card__image {
+    height: 194px;
+  }
+
+  .pricing__price {
+    position: relative;
+    left: -5px;
+
+    letter-spacing: 0.01em;
+  }
+
+  .pricing__amount {
+    position: relative;
+    left: 10px;
+  }
+
+  .card_btn_container {
+    position: relative;
+    top: -21px;
+    left: 5px;
+  }
+}
