@@ -1,5 +1,3 @@
-import client from "../../../assets/client.png";
-
 export default function Feedback (props) {
   return (
     <div className="review">

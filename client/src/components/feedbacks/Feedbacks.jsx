@@ -1,12 +1,9 @@
 import Feedback from "./feedback/Feedback";
-import { useEffect, useState, CSSProperties } from "react";
-import axios from "axios";
 import { useFetching } from "../../hooks/useFetch.hook";
-import ClipLoader from "react-spinners/ClipLoader"
+import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Feedbacks() {
   const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/feedbacks/')
-  console.log(data)
 
   return (
     <div className="reviews__body" id="reviews">
@@ -17,9 +14,6 @@ export default function Feedbacks() {
         отзывы наших клиентов
       </h2>
       <div className="reviews__container">
-        {/* {Data.map((elem) => (
-          <Review key={elem.id} {...elem} />
-        ))} */}
 
       {
         isLoading?(

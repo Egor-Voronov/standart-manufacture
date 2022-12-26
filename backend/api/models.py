@@ -5,6 +5,7 @@ class Product(models.Model):
     product_name = models.CharField(max_length=255, verbose_name='Название товара')
     price = models.IntegerField(verbose_name='Цена')
     count = models.IntegerField(verbose_name='Количество')
+    photo = models.CharField(max_length=500, verbose_name='Фото товара')
     is_active = models.BooleanField(default=True, verbose_name='Статус активности')
 
     def __str__(self):
