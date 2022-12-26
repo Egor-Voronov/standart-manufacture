@@ -1,7 +1,7 @@
-import Review from "./review/Review";
+import Review from "./feedback/Feedback";
 import Data from "./test/Data";
 
-export default function Reviews() {
+export default function Feedbacks() {
   return (
     <div className="reviews__body" id="reviews">
       <h2 className="heading reviews__heading mobile__heading">

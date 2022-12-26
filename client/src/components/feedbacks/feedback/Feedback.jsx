@@ -1,6 +1,6 @@
 import client from "../../../assets/client.png";
 
-export default function Review(props) {
+export default function Feedback (props) {
   return (
     <div className="review">
       <div className="review_image_container">
