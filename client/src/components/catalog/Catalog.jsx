@@ -10,8 +10,6 @@ export default function Catalog() {
     <div className="catalog__body" id="catalog">
       <h2 className="heading catalog__heading">всегда в наличии</h2>
       <div className="cards__container">
-
-        <div className="card__group">
            {
               isLoading?(
                 <ClipLoader />
@@ -19,32 +17,19 @@ export default function Catalog() {
                 <h1>{error}</h1>
               ): data.length? (
                 <>
-                  <CatalogCard {...data[0]}/>
-                  <CatalogCard {...data[1]}/>
+                  <div className="card__group">
+                    <CatalogCard {...data[0]}/>
+                    <CatalogCard {...data[1]}/>
+                  </div>
+                  <div className="card__group">
+                    <CatalogCard {...data[2]}/>
+                    <CatalogCard {...data[3]}/>
+                  </div>
                 </>
               ): (
                 <h1>нет данных</h1>
               )
             }
-        </div>
-
-        <div className="card__group">
-           {
-              isLoading?(
-                <ClipLoader />
-              ): error?(
-                <h1>{error}</h1>
-              ): data.length? (
-                <>
-                  <CatalogCard {...data[2]}/>
-                  <CatalogCard {...data[3]}/>
-                </>
-              ): (
-                <h1>нет данных</h1>
-              )
-            }
-        </div>
-
       </div>
     </div>
   );
