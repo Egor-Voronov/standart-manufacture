@@ -16,15 +16,11 @@ export default function Catalog() {
               ): error?(
                 <h1>{error}</h1>
               ): data.length? (
-                <>
-                  <div className="card__group">
-                    <CatalogCard {...data[0]}/>
-                    <CatalogCard {...data[1]}/>
-                  </div>
-                  <div className="card__group">
-                    <CatalogCard {...data[2]}/>
-                    <CatalogCard {...data[3]}/>
-                  </div>
+                <> {
+                    data.map(e => (
+                      <CatalogCard key={e.id} {...e} />
+                    ))
+                  }
                 </>
               ): (
                 <h1>нет данных</h1>

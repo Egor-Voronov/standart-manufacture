@@ -26,26 +26,6 @@
   margin-bottom: 5px;
 }
 
-.card__group {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-
-  &:nth-child(2n) {
-    .card__name {
-      top: -5px;
-    }
-
-    .card_btn_container {
-      top: 0px;
-    }
-
-    .card_pricing {
-      top: -2px;
-    }
-  }
-}
-
 .card__body {
   width: 400px;
   width: 100%;
@@ -58,6 +38,12 @@
 
   &:last-child {
     margin-bottom: 31.5px;
+  }
+
+  &:nth-child(2n) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 }
 
@@ -154,6 +140,27 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &:nth-child(2n) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+  
+      &:nth-child(2n) {
+        .card__name {
+          margin-top: 2px;
+        }
+  
+        .card_btn_container {
+          top: -25px;
+        }
+  
+        .card_pricing {
+          top: -2px;
+        }
+      }
+    }
+
   }
 
   .cards__container {
@@ -169,26 +176,6 @@
     margin-bottom: 65px;
 
     gap: 20px;
-  }
-
-  .card__group {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    &:nth-child(2n) {
-      .card__name {
-        margin-top: 2px;
-      }
-
-      .card_btn_container {
-        top: -25px;
-      }
-
-      .card_pricing {
-        top: -2px;
-      }
-    }
   }
 
   .card__info {
