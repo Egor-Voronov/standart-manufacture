@@ -134,4 +134,38 @@
       line-height: 29px;
     }
   }
+
+  
+@media (max-width: $footerAdaptiveWidth2) {
+  .footer {
+    height: 100px;
+  }
+
+  .footer__logo {
+    width: 180.95px;
+    height: 65px;
+  }
+
+  .footer__city {
+    img {
+      width: 13px;
+      height: 13px;
+    }
+
+    a {
+      font-size: 15px;
+    }
+  }
+
+  .footer__phone {
+    img {
+      width: 13px;
+      height: 13px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+  }
+}
 }

@@ -14,7 +14,7 @@ export default function RightItem ({}) {
         <div className="r_item_top">
           <img src={mapMarker} alt="город" className="r_item_img" />
           <div className="r_item_texts">
-            <a href="" className="r_item_bold">{city}</a>
+            <span href="" className="r_item_bold city__txt" onClick={() => setOpenModal(true)}>{city}</span>
             <span
               className="r_item_anchor_city r_item_anchor"
               onClick={() => setOpenModal(true)}
@@ -27,7 +27,7 @@ export default function RightItem ({}) {
 
       <div className="r_item_container">
         <div className="r_item_top">
-          <img src={phone} alt='телефон' className="r_item_img" />
+          <img src={phone} alt='телефон' className="r_item_img"/>
           <div className="r_item_texts">
             <a href="" className="r_item_bold">{phoneTxt}</a>
             <span

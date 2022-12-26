@@ -19,18 +19,22 @@
     background-color: $white;
     position: relative;
 
-    min-height: 500px;
+    min-height: 350px;
     min-width: 300px;
 
     @media (min-width: $cityModalwidth) {
         min-height: 300px;
         min-width: 400px;
-      }
+    }
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 700;
+    font-size: 17px;
 }
 
 .modal__close {
@@ -44,9 +48,45 @@
 }
 
 //стили для выбора города в шапке
-
 .modal__city {
     position: relative;
     margin-top: 20px;
     cursor: pointer;
+}
+
+//стили для модального окна при нажатии на маркер карты
+.geo__address {
+    position: relative;
+    margin-top: 20px;
+}
+
+.geo_address_a {
+    cursor: pointer;
+}
+
+//стили для модального окна превью товаров
+.modal__preview {
+    height: 100%;
+}
+
+@media (min-width: $modalPreviewWidth2) {
+    .modal__preview {
+        position: relative;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: $modalPreviewWidth) {
+    .card__body {
+        .modal__container {
+            overflow: visible;
+            width: 50vw;
+            max-height: 100vh;
+            .modal__preview {
+                position: relative;
+                margin-top: 10px;
+                max-height: 100vh;
+            }
+        }
+    }
 }

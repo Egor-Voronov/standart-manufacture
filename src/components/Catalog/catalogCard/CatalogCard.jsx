@@ -1,5 +1,6 @@
 import { useState } from "react";
 import product1 from "../../../assets/T-crab.png";
+import Modal from "../../modal/Modal";
 
 export default function CatalogCard(props) {
   const [buttonText, setButtonText] = useState("Заказать");
@@ -7,9 +8,11 @@ export default function CatalogCard(props) {
   const buttonActiveHandler = () => setButtonText("Отменить");
   const buttonNotActiveHandler = () => setButtonText("Заказать");
 
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="card__body">
-      <img src={product1} alt="изображение товара" className="card__image" />
+      <img src={product1} alt="изображение товара" className="card__image" onClick={() => setOpenModal(true)} />
       <div className="card__info">
         <h1 className="card__name notoSans_card">{props.name}</h1>
         <div className="card_pricing card_info_item">
@@ -30,6 +33,14 @@ export default function CatalogCard(props) {
           </button>
         </div>
       </div>
+
+      <Modal
+        open={openModal} 
+        onClose={() => setOpenModal(false)}
+      >
+        <img src={product1} alt="превью товара" className="card__image modal__preview"/>
+      </Modal>
+
     </div>
   );
 }
