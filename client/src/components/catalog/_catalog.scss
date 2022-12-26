@@ -22,28 +22,8 @@
   position: relative;
   gap: 8px;
 
-  margin-top: 82px;
+  margin-top: 70px;
   margin-bottom: 5px;
-}
-
-.card__group {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-
-  &:nth-child(2n) {
-    .card__name {
-      top: -5px;
-    }
-
-    .card_btn_container {
-      top: 0px;
-    }
-
-    .card_pricing {
-      top: -2px;
-    }
-  }
 }
 
 .card__body {
@@ -56,9 +36,36 @@
 
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  position: relative;
+  margin-top: 15px;
+  margin-left: 0;
+
   &:last-child {
     margin-bottom: 31.5px;
   }
+
+  &:nth-child(2n+3) {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 0;
+
+    .card__name {
+      top: -5px;
+    }
+
+    .card_btn_container {
+      top: 0px;
+    }
+
+    .card_pricing {
+      top: -2px;
+    }
+  }
+
 }
 
 .card__image {
@@ -70,11 +77,15 @@
 
 .card__info {
   color: $black;
-  padding: 18px 23.5px;
+  padding: 0px 23.5px;
 
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  position: relative;
+  margin-top: -5px;
+  margin-left: -3.5px;
 }
 
 .card__name {
@@ -154,10 +165,6 @@
     gap: 20px;
   }
 
-  .card__body {
-    position: relative;
-  }
-
   .catalog__heading {
     top: 48px;
   }
@@ -172,12 +179,14 @@
 
     position: relative;
     margin-left: -10px;
+    margin-top: 0;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     &:nth-child(2n+3) {
+      margin-top: 0;
       position: relative;
       margin-left: 2px;
 
