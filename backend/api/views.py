@@ -18,3 +18,7 @@ class CityAPIView(generics.ListAPIView):
 class FeedbackAPIView(generics.ListAPIView):
     queryset = Feedback.objects.all()
     serializer_class = FeedbackSerializer
+
+
+def index(request):
+    return render(request, 'index.html', {})
