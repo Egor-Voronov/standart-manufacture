@@ -32,6 +32,7 @@ class City(models.Model):
 class Feedback(models.Model):
     author_name = models.CharField(max_length=255, verbose_name='Имя автора')
     text = models.CharField(max_length=500, verbose_name='Текст отзыва')
+    photo = models.CharField(max_length=500, verbose_name='Фото пользователя')
     is_active = models.BooleanField(default=True, verbose_name='Статус активности')
 
     def __str__(self):
