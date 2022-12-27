@@ -6,11 +6,10 @@ import phone from "../../../assets/phone.svg";
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function RightItem ({}) {
+export default function RightItem ({ callback }) {
   const [openModal, setOpenModal] = useState(false);
 
   const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/citys/')
-  console.log(data)
 
   const setPhone = (n = 0) => {
     return (
@@ -44,8 +43,26 @@ export default function RightItem ({}) {
     )
   }
 
+  const setGeo = (n = 0,) => {
+    return (
+      isLoading?(
+        <ClipLoader />
+      ): error?(
+        <h1>{error}</h1>
+      ): data.length? (
+        <>
+         <>{data[n].map_coordinates}</>
+         <>{data[n].map_coordinates2}</>
+        </>
+      ): (
+        <h1>нет данных</h1>
+      )
+    )
+  }
+
   let [currCity, setCurrCity] = useState('Москва');
   let [currPhone, setCurrPhone] = useState('8-985-344-76-46');
+  let [currGeo, setCurrGeo] = useState('55.751574, 37.573856');
   
   return (
     <>
@@ -84,6 +101,8 @@ export default function RightItem ({}) {
             () => {
               setCurrCity(setCity(0))
               setCurrPhone(setPhone(0))
+              setCurrGeo(setGeo(0))
+              callback(currGeo)
             }} 
           >{setCity(0)}</a>
 
@@ -92,6 +111,8 @@ export default function RightItem ({}) {
             () => {
               setCurrCity(setCity(1))
               setCurrPhone(setPhone(1))
+              setCurrGeo(setGeo(1))
+              callback(currGeo)
           }}
             >{setCity(1)}
         </a>
@@ -99,6 +120,8 @@ export default function RightItem ({}) {
             () => {
               setCurrCity(setCity(2))
               setCurrPhone(setPhone(2))
+              setCurrGeo(setGeo(2))
+              callback(currGeo)
             }}
           >{setCity(2)}</a>
       </Modal>

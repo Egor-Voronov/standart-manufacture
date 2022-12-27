@@ -20,6 +20,7 @@ class City(models.Model):
     city_name = models.CharField(max_length=100, verbose_name='Название города')
     phone_number = models.CharField(max_length=20, verbose_name='Номер телефона')
     map_coordinates = models.CharField(max_length=255, verbose_name='Координаты на карте')
+    map_coordinates2 = models.CharField(max_length=255, verbose_name='Координаты на карте')
     is_active = models.BooleanField(default=True, verbose_name='Статус активности')
 
     def __str__(self):
