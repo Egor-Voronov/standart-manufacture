@@ -5,7 +5,7 @@ import phone from "../../../assets/phone.svg";
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function RightItem ({ callback }) {
+export default function RightItem ({ setGeo, geo }) {
   const [openModal, setOpenModal] = useState(false);
 
   const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/citys/')
@@ -42,27 +42,12 @@ export default function RightItem ({ callback }) {
     )
   }
 
-  const setGeo = (n = 0,) => {
-    return (
-      isLoading?(
-        <ClipLoader />
-      ): error?(
-        <h1>{error}</h1>
-      ): data.length? (
-        <>
-         <>{data[n].map_coordinates}</>
-         <>{data[n].map_coordinates2}</>
-        </>
-      ): (
-        <h1>нет данных</h1>
-      )
-    )
-  }
+  
 
   let [currCity, setCurrCity] = useState('Москва');
   let [currPhone, setCurrPhone] = useState('8-985-344-76-46');
-  let [currGeo, setCurrGeo] = useState('55.751574, 37.573856');
   
+
   return (
     <>
       <div className="r_item_container">
@@ -100,8 +85,9 @@ export default function RightItem ({ callback }) {
             () => {
               setCurrCity(setCity(0))
               setCurrPhone(setPhone(0))
-              setCurrGeo(setGeo(0))
-              callback(currGeo)
+              setGeo (
+                `${data[0].map_coordinates}, ${data[0].map_coordinates2}`
+              )
             }} 
           >{setCity(0)}</a>
 
@@ -110,22 +96,24 @@ export default function RightItem ({ callback }) {
             () => {
               setCurrCity(setCity(1))
               setCurrPhone(setPhone(1))
-              setCurrGeo(setGeo(1))
-              callback(currGeo)
+              setGeo (
+                `${data[1].map_coordinates}, ${data[1].map_coordinates2}`
+              )
           }}
             >{setCity(1)}
         </a>
-        <a className="modal__city"  onClick={
+        <a className="modal__city" onClick={
             () => {
               setCurrCity(setCity(2))
               setCurrPhone(setPhone(2))
-              setCurrGeo(setGeo(2))
-              callback(currGeo)
+              setGeo (
+                `${data[2].map_coordinates}, ${data[2].map_coordinates2}`
+              )
             }}
           >{setCity(2)}</a>
       </Modal>
       </div>
-
+        
     </>
   )
 }

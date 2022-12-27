@@ -11,11 +11,11 @@ import Footer from "./footer/Footer";
 import { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState()
+  let [geo, setGeo] = useState('55.751574, 37.573856');
 
   return (
     <div className="App">
-      <Header callback={setValue}/>
+      <Header geo={geo} setGeo={setGeo}/>
       <Banner />
       <Advanatages />
       <Catalog />
@@ -24,7 +24,7 @@ function App() {
       <Calculation />
       <Partners />
       <Feedbacks />
-      <Map geo={value} />
+      <Map geo={geo} />
       <Footer />
     </div>
   );

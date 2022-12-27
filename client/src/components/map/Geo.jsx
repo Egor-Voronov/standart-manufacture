@@ -1,14 +1,16 @@
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../modal/Modal";
 
-export default function Geo(geo) {
-  const defaultState = {
+export default function Geo({geo}) {
+  const defaultMapState = {
     center: [55.751574, 37.573856],
-    zoom: 5,
-  };
+    zoom: 7,
+  }
 
-  let state = defaultState;
+  const [mapState, setMapState] = useState({
+    ...defaultMapState
+  })
 
   const [mapHover, setMapHover] = useState(true);
   const mapHoverClassArr = ["map__hover"];
@@ -17,19 +19,28 @@ export default function Geo(geo) {
 
   const [openModal, setOpenModal] = useState(false);
 
-  console.log(geo)
+  useEffect(() => {
+    if (geo) {
+      setMapState(prev => (
+        {
+          ...prev, center: geo.split(', ').map(e => Number(e))
+        }
+      ))
+    }
+  }, [geo])
 
   return (
     <div className="geo__body">
-      <h2 className="heading map__heading">{geo}</h2>
+      <h2 className="heading map__heading">{}</h2>
 
       <YMaps className="map__container">
         <Map
-          defaultState={state}
+          defaultState={defaultMapState}
           className="map"
           onClick={() => mapHoverHandler()}
+          state={mapState}
         >
-          <Placemark geometry={[55.684758, 37.738521]} 
+          <Placemark geometry={mapState.center} 
             onClick={() => {
               setOpenModal(true)
               mapHoverHandler()
