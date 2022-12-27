@@ -8,11 +8,14 @@ import Partners from "./partners/Partners";
 import Feedbacks from "./feedbacks/Feedbacks";
 import Map from "./map/Geo";
 import Footer from "./footer/Footer";
+import { useState } from "react";
 
 function App() {
+  const [value, setValue] = useState()
+
   return (
     <div className="App">
-      <Header />
+      <Header callback={setValue}/>
       <Banner />
       <Advanatages />
       <Catalog />
@@ -21,7 +24,7 @@ function App() {
       <Calculation />
       <Partners />
       <Feedbacks />
-      <Map />
+      <Map geo={value} />
       <Footer />
     </div>
   );

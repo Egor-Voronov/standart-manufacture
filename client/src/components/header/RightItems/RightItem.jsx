@@ -2,7 +2,6 @@ import { useState } from "react";
 import Modal from "../../modal/Modal";
 import mapMarker from '../../../assets/map-marker.svg'
 import phone from "../../../assets/phone.svg";
-
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 

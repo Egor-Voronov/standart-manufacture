@@ -2,7 +2,7 @@ import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import { useState } from "react";
 import Modal from "../modal/Modal";
 
-export default function Geo() {
+export default function Geo(geo) {
   const defaultState = {
     center: [55.751574, 37.573856],
     zoom: 5,
@@ -17,9 +17,11 @@ export default function Geo() {
 
   const [openModal, setOpenModal] = useState(false);
 
+  console.log(geo)
+
   return (
     <div className="geo__body">
-      <h2 className="heading map__heading">мы на карте</h2>
+      <h2 className="heading map__heading">{geo}</h2>
 
       <YMaps className="map__container">
         <Map

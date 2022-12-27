@@ -18,7 +18,7 @@ export default function Header({callback}) {
   toggle ? menuClassArr[1] = 'menu_toggle_opened' : menuClassArr[1] = 'menu_toggle_closed'
   toggle ? headerClassArr[1] = 'header_open_height' : headerClassArr[1] = 'header_closed_height'
 
-  const [value, setvalue] = useState()
+  const [value, setValue] = useState()
 
   callback(value)
 
@@ -45,7 +45,7 @@ export default function Header({callback}) {
                   </li>
                   
                   <li className="menu__item menu_right_items">
-                          <RightItem className='r__item' callback={setvalue} />
+                          <RightItem className='r__item' callback={setValue} />
                   </li>
                   
               </ul>
