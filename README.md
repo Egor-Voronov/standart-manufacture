@@ -3,5 +3,5 @@
 ### команды для запуска клиента (надо будет установить пакетный менеджер YARN):
 * yarn
 * yarn dev
-### команды для запуска бекенда (надо будет установить pip, django и djangorestframework):
+### команды для запуска бекенда (надо будет установить pip, django, django-cors-headers и djangorestframework):
 * python manage.py runserver (в не вложенной папке backend)
