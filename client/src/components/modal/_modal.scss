@@ -58,10 +58,18 @@
 .geo__address {
     position: relative;
     margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .geo_address_a {
     cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.address__heading {
+    font-size: 20px;
 }
 
 //стили для модального окна превью товаров

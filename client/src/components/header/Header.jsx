@@ -4,7 +4,7 @@ import cross from "../../assets/cross.svg";
 import logo from "../../assets/Logo.svg";
 import RightItem from "./RightItems/RightItem";
 
-export default function Header({setGeo, geo}) {
+export default function Header({setGeo, geo, setCity, city, setPhone, phone}) {
   const [toggle, setToggle] = useState(false)
 
   const toggleHandler = () => setToggle(!toggle)
@@ -40,7 +40,14 @@ export default function Header({setGeo, geo}) {
                   </li>
                   
                   <li className="menu__item menu_right_items">
-                          <RightItem className='r__item' setGeo={setGeo} geo={geo} />
+                          <RightItem className='r__item' 
+                            setGeo={setGeo}
+                            geo={geo}
+                            setCity={setCity}
+                            city={city}
+                            setPhone={setPhone}
+                            phone={phone}
+                          />
                   </li>
                   
               </ul>

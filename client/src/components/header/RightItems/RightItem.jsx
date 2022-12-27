@@ -5,12 +5,12 @@ import phoneimg from "../../../assets/phone.svg";
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function RightItem ({ setGeo, geo}) {
+export default function RightItem ({ setGeo, geo, setCity, city, setPhone, phone}) {
   const [openModal, setOpenModal] = useState(false);
 
   const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/citys/')
 
-  const setPhone = (n = 0) => {
+  const setHeaderPhone = (n = 0) => {
     return (
       isLoading?(
         <ClipLoader />
@@ -26,7 +26,7 @@ export default function RightItem ({ setGeo, geo}) {
     )
   }
 
-  const setCity = (n = 0,) => {
+  const setHeaderCity = (n = 0,) => {
     return (
       isLoading?(
         <ClipLoader />
@@ -81,36 +81,54 @@ export default function RightItem ({ setGeo, geo}) {
         <a className="modal__city" onClick={
             () => {
               setOpenModal(false)
-              setCurrCity(setCity(0))
-              setCurrPhone(setPhone(0))
+              setCurrCity(setHeaderCity(0))
+              setCurrPhone(setHeaderPhone(0))
               setGeo (
                 `${data[0].map_coordinates}, ${data[0].map_coordinates2}`
               )
+              setCity (
+                `${data[0].city_name}`
+              )
+              setPhone (
+                `${data[0].phone_number}`
+              )
             }} 
-          >{setCity(0)}</a>
+          >{setHeaderCity(0)}</a>
 
         <a className="modal__city" 
           onClick={
             () => {
               setOpenModal(false)
-              setCurrCity(setCity(1))
-              setCurrPhone(setPhone(1))
+              setCurrCity(setHeaderCity(1))
+              setCurrPhone(setHeaderPhone(1))
               setGeo (
                 `${data[1].map_coordinates}, ${data[1].map_coordinates2}`
               )
+              setCity (
+                `${data[1].city_name}`
+              )
+              setPhone (
+                `${data[1].phone_number}`
+              )
           }}
-            >{setCity(1)}
+            >{setHeaderCity(1)}
         </a>
         <a className="modal__city" onClick={
             () => {
               setOpenModal(false)
-              setCurrCity(setCity(2))
-              setCurrPhone(setPhone(2))
+              setCurrCity(setHeaderCity(2))
+              setCurrPhone(setHeaderPhone(2))
               setGeo (
                 `${data[2].map_coordinates}, ${data[2].map_coordinates2}`
               )
+              setCity (
+                `${data[2].city_name}`
+              )
+              setPhone (
+                `${data[2].phone_number}`
+              )
             }}
-          >{setCity(2)}</a>
+          >{setHeaderCity(2)}</a>
       </Modal>
       </div>
         

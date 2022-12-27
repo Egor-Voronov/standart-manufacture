@@ -12,10 +12,12 @@ import { useState } from "react";
 
 function App() {
   let [geo, setGeo] = useState('55.751574, 37.573856');
+  let [city, setCity] = useState('Москва')
+  let [phone, setPhone] = useState('8-985-344-76-46')
 
   return (
     <div className="App">
-      <Header geo={geo} setGeo={setGeo}/>
+      <Header geo={geo} setGeo={setGeo} city={city} setCity={setCity} phone={phone} setPhone={setPhone} />
       <Banner />
       <Advanatages />
       <Catalog />
@@ -24,7 +26,7 @@ function App() {
       <Calculation />
       <Partners />
       <Feedbacks />
-      <Map geo={geo} />
+      <Map geo={geo} city={city} phone={phone} />
       <Footer />
     </div>
   );
