@@ -83,6 +83,7 @@ export default function RightItem ({ setGeo, geo }) {
       >
         <a className="modal__city" onClick={
             () => {
+              setOpenModal(false)
               setCurrCity(setCity(0))
               setCurrPhone(setPhone(0))
               setGeo (
@@ -94,6 +95,7 @@ export default function RightItem ({ setGeo, geo }) {
         <a className="modal__city" 
           onClick={
             () => {
+              setOpenModal(false)
               setCurrCity(setCity(1))
               setCurrPhone(setPhone(1))
               setGeo (
@@ -104,6 +106,7 @@ export default function RightItem ({ setGeo, geo }) {
         </a>
         <a className="modal__city" onClick={
             () => {
+              setOpenModal(false)
               setCurrCity(setCity(2))
               setCurrPhone(setPhone(2))
               setGeo (
