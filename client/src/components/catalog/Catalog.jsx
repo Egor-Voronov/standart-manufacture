@@ -4,7 +4,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Catalog() {
   const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/products/')
-  console.log(data)
 
   return (
     <div className="catalog__body" id="catalog">
