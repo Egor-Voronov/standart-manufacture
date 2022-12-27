@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Modal from "../../modal/Modal";
 import mapMarker from '../../../assets/map-marker.svg'
-import phone from "../../../assets/phone.svg";
+import phoneimg from "../../../assets/phone.svg";
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function RightItem ({ setGeo, geo }) {
+export default function RightItem ({ setGeo, geo}) {
   const [openModal, setOpenModal] = useState(false);
 
   const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/citys/')
@@ -42,11 +42,8 @@ export default function RightItem ({ setGeo, geo }) {
     )
   }
 
-  
-
   let [currCity, setCurrCity] = useState('Москва');
   let [currPhone, setCurrPhone] = useState('8-985-344-76-46');
-  
 
   return (
     <>
@@ -67,7 +64,7 @@ export default function RightItem ({ setGeo, geo }) {
 
       <div className="r_item_container">
         <div className="r_item_top">
-          <img src={phone} alt='телефон' className="r_item_img"/>
+          <img src={phoneimg} alt='телефон' className="r_item_img"/>
           <div className="r_item_texts">
             <a href="" className="r_item_bold">{currPhone}</a>
             <span
