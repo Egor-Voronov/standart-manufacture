@@ -22,7 +22,7 @@
     min-height: 350px;
     min-width: 300px;
 
-    @media (min-width: $cityModalwidth) {
+    @media (min-width: $cityModalWidth) {
         min-height: 300px;
         min-width: 400px;
     }

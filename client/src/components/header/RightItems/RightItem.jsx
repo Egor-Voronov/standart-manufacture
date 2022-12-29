@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "../../modal/Modal";
 import mapMarker from '../../../assets/map-marker.svg'
-import phoneimg from "../../../assets/phone.svg";
+import phoneImg from "../../../assets/phone.svg";
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -51,7 +51,7 @@ export default function RightItem ({ setGeo, geo, setCity, city, setPhone, phone
         <div className="r_item_top">
           <img src={mapMarker} alt="город" className="r_item_img" />
           <div className="r_item_texts">
-            <span href="" className="r_item_bold city__txt" onClick={() => setOpenModal(true)}>{currCity}</span>
+            <span className="r_item_bold city__txt" onClick={() => setOpenModal(true)}>{currCity}</span>
             <span
               className="r_item_anchor_city r_item_anchor"
               onClick={() => setOpenModal(true)}
@@ -64,7 +64,7 @@ export default function RightItem ({ setGeo, geo, setCity, city, setPhone, phone
 
       <div className="r_item_container">
         <div className="r_item_top">
-          <img src={phoneimg} alt='телефон' className="r_item_img"/>
+          <img src={phoneImg} alt='телефон' className="r_item_img"/>
           <div className="r_item_texts">
             <a href="" className="r_item_bold">{currPhone}</a>
             <span

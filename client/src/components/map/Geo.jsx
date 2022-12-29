@@ -5,7 +5,7 @@ import Modal from "../modal/Modal";
 export default function Geo({geo, city, phone}) {
   const defaultMapState = {
     center: [55.751574, 37.573856],
-    zoom: 7,
+    zoom: 8,
   }
 
   const [mapState, setMapState] = useState({
@@ -31,7 +31,7 @@ export default function Geo({geo, city, phone}) {
 
   return (
     <div className="geo__body">
-      <h2 className="heading map__heading">{}</h2>
+      <h2 className="heading map__heading">Мы на карте</h2>
 
       <YMaps className="map__container">
         <Map

@@ -10,7 +10,7 @@ import img8 from "../../assets/like.svg";
 
 import Advantage from "./advantage/Advantage";
 
-export default function Advanatages2({isSecondAdvantage}) {
+export default function Advantages ({isSecondAdvantage}) {
   return (
     <div className={isSecondAdvantage ? 'advantages__body advantages2' : 'advantages__body'}>
       <h2 className="heading advantages__heading">{isSecondAdvantage ? "Почему мы?" : 'преимущества системы'}</h2>

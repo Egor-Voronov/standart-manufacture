@@ -63,7 +63,6 @@
 
 @media (min-width: $footerAdaptiveWidth) {
   .footer {
-    padding: 0;
     height: 187px;
 
     display: flex;
@@ -72,7 +71,7 @@
 
     margin-bottom: 20px;
     position: relative;
-    padding-bottom: 50px;
+    padding: 0 0 50px;
   }
 
   .footer__nav {
@@ -132,7 +131,7 @@
     }
 
     a {
-      margin-top: 0px;
+      margin-top: 0;
       font-size: 24px;
       line-height: 29px;
     }

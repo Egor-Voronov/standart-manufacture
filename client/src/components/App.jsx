@@ -1,6 +1,6 @@
 import Header from "./header/Header";
 import Banner from "./banner/Banner";
-import Advanatages from "./advantages/Advantages";
+import Advantages from "./advantages/Advantages";
 import Catalog from "./catalog/Catalog";
 import Video from "./video/Video";
 import Calculation from "./calculation/Calculation";
@@ -19,9 +19,9 @@ function App() {
     <div className="App">
       <Header geo={geo} setGeo={setGeo} city={city} setCity={setCity} phone={phone} setPhone={setPhone} />
       <Banner />
-      <Advanatages />
+      <Advantages />
       <Catalog />
-      <Advanatages isSecondAdvantage={true} />
+      <Advantages isSecondAdvantage={true} />
       <Video />
       <Calculation />
       <Partners />

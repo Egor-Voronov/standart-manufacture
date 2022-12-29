@@ -63,7 +63,7 @@
 
   .banner__container {
     width: 1280px;
-    left: 0px;
+    left: 0;
     top: 118px;
   }
 
@@ -92,7 +92,6 @@
 
 @media (min-width: $bannerDesktopWidth) and (max-width: $bannerAdaptiveWidth1) {
   .backgroundImage__banner {
-    background-size: cover;
     background-size: 110%;
     background-repeat: no-repeat;
 
