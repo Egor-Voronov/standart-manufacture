@@ -30,7 +30,6 @@ export default function Calculation() {
               </span>
             </label>
           </div>
-          
         </div>
       </form>
     </div>

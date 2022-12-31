@@ -6,9 +6,10 @@ export default function Footer() {
   return (
     <footer className="footer">
       <nav className="footer__nav">
-        <a href={window.location.href}><img src={logo} alt="логотип" className="footer__logo" /></a>
+        <a href={window.location.href}>
+          <img src={logo} alt="логотип" className="footer__logo" />
+        </a>
         <div className="contacts">
-
           <div className="footer__city">
             <img src={mapMarker} alt="город" />
             <a href="#">Москва, ул. Ленина, д. 25</a>
@@ -18,10 +19,8 @@ export default function Footer() {
             <img src={phone} alt="телефон" />
             <a href="#">8-985-344-76-46</a>
           </div>
-
         </div>
       </nav>
     </footer>
   );
 }
-

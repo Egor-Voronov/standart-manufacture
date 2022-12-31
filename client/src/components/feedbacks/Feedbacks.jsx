@@ -2,7 +2,7 @@ import Feedback from "./feedback/Feedback";
 import { useFetching } from "../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function Feedbacks({apiRoute}) {
+export default function Feedbacks({ apiRoute }) {
   const [data, error, isLoading] = useFetching(`${apiRoute}feedbacks/`);
 
   return (
@@ -14,23 +14,19 @@ export default function Feedbacks({apiRoute}) {
         отзывы наших клиентов
       </h2>
       <div className="reviews__container">
-
-      {
-        isLoading?(
+        {isLoading ? (
           <ClipLoader />
-        ): error?(
+        ) : error ? (
           <h1>{error}</h1>
-        ): data.length? (
-          <>{
-            data.map(e => (
+        ) : data.length ? (
+          <>
+            {data.map((e) => (
               <Feedback key={e.id} {...e} />
-            ))
-          }</>
-        ): (
+            ))}
+          </>
+        ) : (
           <h1>нет данных</h1>
-        )
-      }
-
+        )}
       </div>
     </div>
   );

@@ -10,16 +10,28 @@ export default function Partners() {
         <h2 className="heading partners__heading">наши партнеры</h2>
         <div className="partners__container">
           <a href="">
-            <img src={partner1} alt="наш партнер" className="partner partner1" />
+            <img
+              src={partner1}
+              alt="наш партнер"
+              className="partner partner1"
+            />
           </a>
           <a href="">
-            <img src={partner2} alt="наш партнер" className="partner partner2" />
+            <img
+              src={partner2}
+              alt="наш партнер"
+              className="partner partner2"
+            />
           </a>
           <a href="">
-            <img src={partner3} alt="наш партнер" className="partner partner3" />
+            <img
+              src={partner3}
+              alt="наш партнер"
+              className="partner partner3"
+            />
           </a>
         </div>
-    </div>
+      </div>
     </>
   );
 }
