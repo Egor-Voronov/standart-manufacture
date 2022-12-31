@@ -2,8 +2,8 @@ import CatalogCard from "./catalogCard/CatalogCard";
 import { useFetching } from "../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function Catalog() {
-  const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/products/')
+export default function Catalog({apiRoute}) {
+  const [data, error, isLoading] = useFetching(`${apiRoute}products/`);
 
   return (
     <div className="catalog__body" id="catalog">

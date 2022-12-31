@@ -4,7 +4,7 @@ import cross from "../../assets/cross.svg";
 import logo from "../../assets/Logo.svg";
 import RightItem from "./RightItems/RightItem";
 
-export default function Header({setGeo, geo, setCity, city, setPhone, phone}) {
+export default function Header({setGeo, geo, setCity, city, setPhone, phone, apiRoute}) {
   const [toggle, setToggle] = useState(false)
 
   const toggleHandler = () => setToggle(!toggle)
@@ -27,16 +27,16 @@ export default function Header({setGeo, geo, setCity, city, setPhone, phone}) {
               </div>
               <ul className={menuClassArr.join(' ')}>
                   <li className="menu__item">
-                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#catalog">Каталог</a>
+                      <a className="anchor header_menu_anchor" onClick={() => anchorClickHandler()} href="#catalog">Каталог</a>
                   </li>
                   <li className="menu__item">
-                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#calculation">Расчет стоимости</a>
+                      <a className="anchor header_menu_anchor" onClick={() => anchorClickHandler()} href="#calculation">Расчет стоимости</a>
                   </li>
                   <li className="menu__item">
-                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#partners">Партнеры</a>
+                      <a className="anchor header_menu_anchor" onClick={() => anchorClickHandler()} href="#partners">Партнеры</a>
                   </li>
                   <li className="menu__item">
-                      <a className="anchor header_menu_anchor" onClick={() => (anchorClickHandler)()} href="#reviews">Отзывы</a>
+                      <a className="anchor header_menu_anchor" onClick={() => anchorClickHandler()} href="#reviews">Отзывы</a>
                   </li>
                   
                   <li className="menu__item menu_right_items">
@@ -46,6 +46,7 @@ export default function Header({setGeo, geo, setCity, city, setPhone, phone}) {
                             setCity={setCity}
                             city={city}
                             setPhone={setPhone}
+                                     apiRoute={apiRoute}
                             phone={phone}
                           />
                   </li>

@@ -5,10 +5,10 @@ import phoneImg from "../../../assets/phone.svg";
 import { useFetching } from "../../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function RightItem ({ setGeo, geo, setCity, city, setPhone, phone}) {
+export default function RightItem ({ setGeo, geo, setCity, city, setPhone, phone, apiRoute}) {
   const [openModal, setOpenModal] = useState(false);
 
-  const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/citys/')
+  const [data, error, isLoading] = useFetching(`${apiRoute}citys/`)
 
   const setHeaderPhone = (n = 0) => {
     return (
@@ -66,7 +66,7 @@ export default function RightItem ({ setGeo, geo, setCity, city, setPhone, phone
         <div className="r_item_top">
           <img src={phoneImg} alt='телефон' className="r_item_img"/>
           <div className="r_item_texts">
-            <a href="" className="r_item_bold">{currPhone}</a>
+            <a href='tel:' className="r_item_bold">{currPhone}</a>
             <span
               className="r_item_anchor_phone r_item_anchor"
             >

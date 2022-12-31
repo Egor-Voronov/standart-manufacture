@@ -2,8 +2,8 @@ import Feedback from "./feedback/Feedback";
 import { useFetching } from "../../hooks/useFetch.hook";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export default function Feedbacks() {
-  const [data, error, isLoading] = useFetching('http://127.0.0.1:8000/api/feedbacks/')
+export default function Feedbacks({apiRoute}) {
+  const [data, error, isLoading] = useFetching(`${apiRoute}feedbacks/`);
 
   return (
     <div className="reviews__body" id="reviews">

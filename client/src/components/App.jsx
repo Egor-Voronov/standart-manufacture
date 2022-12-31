@@ -14,18 +14,19 @@ function App() {
   let [geo, setGeo] = useState('55.751574, 37.573856');
   let [city, setCity] = useState('Москва')
   let [phone, setPhone] = useState('8-985-344-76-46')
+    const apiRoute = 'http://127.0.0.1:8000/api/';
 
   return (
     <div className="App">
-      <Header geo={geo} setGeo={setGeo} city={city} setCity={setCity} phone={phone} setPhone={setPhone} />
+      <Header geo={geo} setGeo={setGeo} city={city} setCity={setCity} phone={phone} setPhone={setPhone} apiRoute={apiRoute} />
       <Banner />
       <Advantages />
-      <Catalog />
+      <Catalog apiRoute={apiRoute} />
       <Advantages isSecondAdvantage={true} />
       <Video />
       <Calculation />
       <Partners />
-      <Feedbacks />
+      <Feedbacks apiRoute={apiRoute} />
       <Map geo={geo} city={city} phone={phone} />
       <Footer />
     </div>

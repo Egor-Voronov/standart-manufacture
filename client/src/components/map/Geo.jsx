@@ -23,7 +23,7 @@ export default function Geo({geo, city, phone}) {
     if (geo) {
       setMapState(prev => (
         {
-          ...prev, center: geo.split(', ').map(e => Number(e))
+          ...prev, center: geo.split(', ').map(Number)
         }
       ))
     }
