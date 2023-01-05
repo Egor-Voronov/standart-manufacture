@@ -3,7 +3,8 @@
 ### команды для запуска клиента (надо будет установить пакетный менеджер YARN):
 * yarn
 * yarn dev
-### команды для запуска бекенда (надо будет установить pip, django, django-cors-headers и djangorestframework):
+### команды для запуска бекенда (надо будет установить pip):
+* pip install -r requirements.txt
 * python manage.py runserver (в не вложенной папке backend)
 ### https://www.figma.com/file/TXBftmqmNQQ8YxQBDA5i0X/ЗГТ_Краб-система-(Copy)?node-id=0%3A1&t=IVvH5PzOeYdW9gX6-0 - дизайн
 ### используемый стек технологий:
