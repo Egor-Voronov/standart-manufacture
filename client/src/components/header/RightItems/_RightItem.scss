@@ -36,6 +36,7 @@
 }
 
 .r_item_top {
+  text-decoration: none;
   display: flex;
   align-items: flex-start;
 }
@@ -114,4 +115,8 @@
       display: block;
     }
   }
+}
+
+.no_decoration {
+  text-decoration: none;
 }

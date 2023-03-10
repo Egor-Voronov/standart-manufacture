@@ -51,13 +51,13 @@ export default function RightItem({
 
   return (
     <>
-      <div className="r_item_container">
+      <div className="r_item_container"
+           onClick={() => setOpenModal(true)}>
         <div className="r_item_top">
           <img src={mapMarker} alt="город" className="r_item_img" />
           <div className="r_item_texts">
             <span
               className="r_item_bold city__txt"
-              onClick={() => setOpenModal(true)}
             >
               {currCity}
             </span>
@@ -73,14 +73,18 @@ export default function RightItem({
 
       <div className="r_item_container">
         <div className="r_item_top">
-          <img src={phoneImg} alt="телефон" className="r_item_img" />
+            <a href="tel:">
+                <img src={phoneImg} alt="телефон" className="r_item_img" />
+            </a>
           <div className="r_item_texts">
             <a href="tel:" className="r_item_bold">
               {currPhone}
             </a>
-            <span className="r_item_anchor_phone r_item_anchor">
-              Заказать звонок
-            </span>
+              <a href="tel:" className="no_decoration">
+                <span className="r_item_anchor_phone r_item_anchor ">
+                  Заказать звонок
+                </span>
+              </a>
           </div>
         </div>
         <Modal open={openModal} onClose={() => setOpenModal(false)}>
