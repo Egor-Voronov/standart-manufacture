@@ -22,7 +22,7 @@ export default function CatalogCard(props) {
         <div className="card_pricing card_info_item">
           <h3 className="pricing__price">{props.price} руб/комп</h3>
           <h3 className="pricing__amount notoSans_card">
-            <div>{props.count}</div> <span> комп.</span>
+            <div>{props.count}</div> <span> в наличии</span>
           </h3>
         </div>
         <div className="card_btn_container">
