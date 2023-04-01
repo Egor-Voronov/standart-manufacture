@@ -10,3 +10,4 @@
 ### tech stack:
 * on the client - JavaScript, React, SASS, Vite, YARN, Prettier, react router, react Ymaps, react spinners
 * on the backend - Python, Django, pip, sqlite
+#### admin password + login - admin
