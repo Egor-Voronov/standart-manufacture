@@ -2,10 +2,10 @@ import { useState } from "react";
 import Modal from "../../modal/Modal";
 
 export default function CatalogCard(props) {
-  const [buttonText, setButtonText] = useState("Заказать");
+  const [buttonText, setButtonText] = useState("Рассчитать цену");
 
   const buttonActiveHandler = () => setButtonText("Отменить");
-  const buttonNotActiveHandler = () => setButtonText("Заказать");
+  const buttonNotActiveHandler = () => setButtonText("Рассчитать цену");
 
   const [openModal, setOpenModal] = useState(false);
 
