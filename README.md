@@ -1,5 +1,5 @@
 # standart-manufacture
-### [https://app.netlify.com/sites/jolly-centaur-5d6604/overview](https://jolly-centaur-5d6604.netlify.app) - deploy without backend
+### https://cerulean-lolly-ee8d80.netlify.app - deploy without backend
 ### commands to start the client (it will be necessary to install the YARN package manager):
 * yarn
 * yarn dev
