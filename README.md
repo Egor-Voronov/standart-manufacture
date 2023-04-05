@@ -1,8 +1,8 @@
 # standart-manufacture
 ### https://cerulean-lolly-ee8d80.netlify.app - deploy without backend
 ### commands to start the client (this requires YARN package manager to be installed):
-* yarn
-* yarn dev
+* ```yarn```
+* ```yarn dev```
 ### commands to start the backend (you will need to install pip):
 * pip install -r requirements.txt (pip(2 / 3) on unix systems instead)
 * python manage.py runserver (python(2 / 3) on unix systems instead)
